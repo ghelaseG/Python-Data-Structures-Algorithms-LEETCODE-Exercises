@@ -19,4 +19,27 @@ class LinkedList:
     def insert(self, index, value):
     #create new Node
     #insert Node
+
+    #instead of doing this tedious task, we can create a class that create Nodes.
+    class Node:
+        def __init__(self, value): #contains only this constructor
+            self.value = value
+            self.next = None
+    
 """
+
+class Node:
+        def __init__(self, value): #contains only this constructor
+            self.value = value
+            self.next = None
+
+class LinkedList:
+      def __init__(self, value):
+            new_node = Node(value)
+            self.head = new_node
+            self.tail = new_node
+            self.length = 1
+
+my_linked_list = LinkedList(4)
+
+print(my_linked_list.head.value)
