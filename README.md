@@ -6,7 +6,7 @@ Favourite resources:
 - FlowChart : [Algo Monster](https://algo.monster/flowchart)
 - Roadmap : [Neetcode](https://neetcode.io/roadmap)
 - Course : [Udemy](https://www.udemy.com/course/data-structures-algorithms-python/?couponCode=ST13MT40224)
-- Github: [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
+- Github : [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
 
 Patterns and constraints:
 
