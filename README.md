@@ -1,8 +1,9 @@
 Favourite resources:
 
 - Big O Cheatsheet : [BigO](https://www.bigocheatsheet.com/)
-- Visualize and Debug : [Python Tutor](https://pythontutor.com)
-- Leetcode Cheatsheet : [Pirate King](https://www.piratekingdom.com/leetcode/cheat-sheet)
+- Visualize and Debug Code : [Python Tutor](https://pythontutor.com)
+- Data Structure/Algorithms Visualizations : [myUSF](https://www.cs.usfca.edu/~galles/visualization/)[Visualgo](https://visualgo.net/en)
+- Leetcode Cheatsheet : [Pirate King](https://www.piratekingdom.com/leetcode/cheat-sheet)[Mike Bostock](https://bost.ocks.org/mike/)
 - FlowChart : [Algo Monster](https://algo.monster/flowchart)
 - Roadmap : [Neetcode](https://neetcode.io/roadmap)
 - Course : [Udemy](https://www.udemy.com/course/data-structures-algorithms-python/?couponCode=ST13MT40224)
