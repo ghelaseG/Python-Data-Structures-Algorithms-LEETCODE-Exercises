@@ -63,7 +63,7 @@ class LinkedList:
         temp.next = None
         self.length -= 1
         if self.length == 0:
-            self.temp = None
+            self.tail = None
         return temp #to see the values write temp.value
 
 my_linked_list = LinkedList(3)

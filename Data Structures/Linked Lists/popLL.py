@@ -42,7 +42,7 @@ class LinkedList:
         if self.length == 0:
             self.head = None
             self.tail = None
-        return temp.value
+        return temp
     
 
 my_linked_list = LinkedList(1)

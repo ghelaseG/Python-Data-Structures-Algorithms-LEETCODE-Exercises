@@ -76,7 +76,7 @@ class LinkedList:
     
     def set_value(self, index, value):
         temp = self.get(index)
-        if temp:
+        if temp: #we can write if temp is not None:
             temp.value = value
             return True
         return False
