@@ -109,7 +109,7 @@ class LinkedList:
         self.length -= 1
         return temp #to see the values write temp.value
 
-    def reverse(self):
+    def reverse(self): #coomon question in interview
         temp = self.head
         self.head = self.tail
         self.tail = temp
