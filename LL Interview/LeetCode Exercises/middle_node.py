@@ -17,6 +17,7 @@ The method should only traverse the linked list once.  In other words, you can o
 
 """
 
+#we can do this exercise using two-pointer approach
 class Node:
     def __init__(self,value):
         self.value = value
