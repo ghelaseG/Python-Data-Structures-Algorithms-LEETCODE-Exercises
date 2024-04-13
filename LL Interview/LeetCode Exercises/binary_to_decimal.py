@@ -43,27 +43,18 @@ class LinkedList:
                 temp = temp.next
             print(" -> ".join(values))
 
-    def binary_to_decimal(self, index, value):
+    def binary_to_decimal(self):
         if self.length == 0: # we check if the ll is empty
             return None
 
-        temp = self.head #we reverse our list, to use the power equivalent to the position of the digit
-        self.head = self.tail
-        self.tail = temp 
-        after = temp.next
-        before = None
-        for _ in range(self.length):
-            after = temp.next
-            temp.next = before
-            before = temp
-            temp = after
+        num = Node(0)
+        current = self.head
 
-        
-        while temp is not None:
-            temp = temp.next * 2
+        while current is not None:
+            num = num * 2 + current.value
+            current = current.next
 
-            for _ in range(self.length):
-                temp = temp.next ^ self.length
+        return num
 
         
 
