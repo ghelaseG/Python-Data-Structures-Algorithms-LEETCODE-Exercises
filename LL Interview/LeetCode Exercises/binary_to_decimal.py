@@ -44,10 +44,7 @@ class LinkedList:
             print(" -> ".join(values))
 
     def binary_to_decimal(self):
-        if self.length == 0: # we check if the ll is empty
-            return None
-
-        num = Node(0)
+        num = 0
         current = self.head
 
         while current is not None:
@@ -56,7 +53,14 @@ class LinkedList:
 
         return num
 
-        
+        # let's take an example to see how this module runs:
+    # let's say we got the binary code 110:
+    #in the while loop, will follow:
+    ## num = 0 * 2 + 1 (the first node) = 1
+    ## num becomes 1, therefore:
+    ## num = 1 * 2 + 1 = 3, nexxt num becomes 3
+    ## num = 3 * 2 + 0 = 6 
+    ### VOILA !!! 
 
 
 
