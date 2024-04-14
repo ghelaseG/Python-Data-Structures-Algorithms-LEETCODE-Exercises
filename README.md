@@ -1,5 +1,6 @@
 Favourite resources:
 
+- Drawing Whiteboard (visualize the steps) : [Whiteboard](https://webwhiteboard.com/)
 - Big O Cheatsheet : [BigO](https://www.bigocheatsheet.com/)
 - Visualize and Debug Code : [Python Tutor](https://pythontutor.com)
 - Data Structure/Algorithms Visualizations : [myUSF](https://www.cs.usfca.edu/~galles/visualization/)
