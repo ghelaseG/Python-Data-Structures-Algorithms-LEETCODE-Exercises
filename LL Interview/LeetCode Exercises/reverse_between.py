@@ -76,5 +76,13 @@ class LinkedList:
         self.head = None
         self.length = 0
 
-    def reverse_between(self, index, value):
+    def reverse_between(self, index):
+        temp = self.head # we get the value of the first node in a temporary pointer
+        after = temp.next #here we get the second value
+        before = None # we initialize it as none for the moment
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
         
