@@ -76,4 +76,5 @@ class LinkedList:
         self.head = None
         self.length = 0
 
-    
+    def reverse_between(self, index, value):
+        
