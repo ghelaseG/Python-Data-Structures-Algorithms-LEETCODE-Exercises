@@ -72,13 +72,18 @@ class LinkedList:
         while temp is not None:
             print(temp.value)
     
-    def make_empty(self):
+    #def make_empty(self):
         self.head = None
         self.length = 0
 
     def reverse_between(self, start_index, end_index):
+        print("Debugging reverse_between method...")
+
         if self.length <= 1 or start_index >= end_index:
             return None
+        
+        print("Start index:", start_index)
+        print("End index:", end_index)
         
         previous_node = None
         current_node = self.head
@@ -92,6 +97,9 @@ class LinkedList:
         first_node = previous_node
         last_node = current_node
 
+        print("First node value:", first_node.value if first_node else None)
+        print("Last node value:", last_node.value if last_node else None)
+        
         while current_node and count <= end_index:
             next_node = current_node.next
             current_node.next = previous_node
@@ -99,12 +107,18 @@ class LinkedList:
             current_node = next_node
             count += 1
 
+        print("After reversal:")
+        print("Previous node value after reversal:", previous_node.value)
+        print("Current node value after reversal:", current_node.value if current_node else None)
+
         if first_node is not None:
             first_node.next = previous_node
         else:
             self.head = previous_node
 
         last_node.next = current_node
+
+        print("Debugging complete.")
         
 linked_list = LinkedList(1)
 linked_list.append(2)
