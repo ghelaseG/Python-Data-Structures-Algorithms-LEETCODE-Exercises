@@ -77,27 +77,34 @@ class LinkedList:
         self.length = 0
 
     def reverse_between(self, start_index, end_index):
-        #we check if the list is empty
-        if self.length <= 1:
+        if self.length <= 1 or start_index >= end_index:
             return None
-        #creating this dummy node, will simplify our code
-        dummy = Node(0)
-        dummy.next = self.head
+        
+        previous_node = None
+        current_node = self.head
+        count = 1
 
-        previous_node = dummy
+        while current_node and count < start_index:
+            previous_node = current_node
+            current_node = current_node.next
+            count += 1
 
-        for _ in range(start_index):
-            previous_node = previous_node.next
+        first_node = previous_node
+        last_node = current_node
 
-        current = previous_node.next
+        while current_node and count <= end_index:
+            next_node = current_node.next
+            current_node.next = previous_node
+            previous_node = current_node
+            current_node = next_node
+            count += 1
 
-        for _ in range(end_index - start_index):
-            node_to_move = current.next
-            current.next = node_to_move.next
-            node_to_move.next = previous_node.next
-            previous_node.next = node_to_move
+        if first_node is not None:
+            first_node.next = previous_node
+        else:
+            self.head = previous_node
 
-        self.head = dummy.next
+        last_node.next = current_node
         
 linked_list = LinkedList(1)
 linked_list.append(2)
@@ -125,7 +132,7 @@ linked_list.print_list()
 
 # Reverse an empty linked list
 empty_list = LinkedList(0)
-empty_list.make_empty
+empty_list.make_empty()
 empty_list.reverse_between(0, 0)
 print("Reversed empty linked list: ")
 empty_list.print_list()
