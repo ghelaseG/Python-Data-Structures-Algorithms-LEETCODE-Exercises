@@ -81,21 +81,28 @@ class LinkedList:
         # let's first check if the linked list is empty
         if self.length <= 1:
             return None
-        
+        """let's take an example: start index = 2 | end index = 4, where our list is 1 -> 2 -> 3 -> 4 -> 5 -> 6"""
         #now we create a dummy variable
         ##in this variable, we can store our reversed sublist or reversed linked list, upon request
         ###also helps simplifying our code
+        """dummy will be out of range, Null or just before node: (here) 1 ->"""
         dummy = Node(0)
         #we point our dummy node to the head of the list
+        """now it will point to the first node(head): dummy -> 1"""
         dummy.next = self.head
         #we give the previous node our dummy values
+        """previous will be null too, just here"""
         previous_node = dummy
         #here we iterate until we reach the index before start_index
+        """now this will become, depending on our start index, and ours is 2, so it will iterate 2 times,
+           meaning that previous_node will point at index(1), node 2 - because we start counting from zero"""
         for _ in range(start_index):
-            previous_node = previous_node.next
-        #here current will point to the next node, where the sublist starts to reverse
+            previous_node = previous_node.next """this will point at 2 ->"""
+        # current will point to the node where the sublist starts to reverse
+        """current will point at index(2), node 3, where our reversal starts -> 3 -> 4 etc"""
         current = previous_node.next
-
+        """our first iteration, reversing node at index 3, node 4
+           node_to_move will be """
         for _ in range(end_index - start_index):
             node_to_move = current.next
             current.next = node_to_move.next
