@@ -97,12 +97,24 @@ class LinkedList:
         """now this will become, depending on our start index, and ours is 2, so it will iterate 2 times,
            meaning that previous_node will point at index(1), node 2 - because we start counting from zero"""
         for _ in range(start_index):
-            previous_node = previous_node.next """this will point at 2 ->"""
+            """this will point at 2 ->"""
+            previous_node = previous_node.next 
         # current will point to the node where the sublist starts to reverse
         """current will point at index(2), node 3, where our reversal starts -> 3 -> 4 etc"""
         current = previous_node.next
         """our first iteration, reversing node at index 3, node 4
-           node_to_move will be """
+           node_to_move will point to index 3, node 4 ( as current was index 2 node 3)
+           current.next(index2, node3) will point to index 4 node 5
+           node_to_move(index3, node4) will point to index 2 node 3
+           previous_node(index1, node2) will point to index 3, node 4
+           this will give us: 1 -> 2 -> 4 -> 3 -> 5 -> 6"""
+        
+        """second iteration, reversing at index 4, node 5
+           node_to_move will next point to index 4, node 5
+           current.next(index2, node3) will point to index 5, node 6
+           node_to_move(index4, node5) will point to index 3, node 4
+           previous_node(index1, node 2) will point to index 4, node 5
+           we get: 1 -> 2 -> 5 -> 4 -> 3 -> 6"""
         for _ in range(end_index - start_index):
             node_to_move = current.next
             current.next = node_to_move.next
@@ -116,6 +128,7 @@ linked_list.append(2)
 linked_list.append(3)
 linked_list.append(4)
 linked_list.append(5)
+linked_list.append(6)
 
 print("Original linked list: ")
 linked_list.print_list()
@@ -126,7 +139,7 @@ print("Reversed sublist (2, 4): ")
 linked_list.print_list()
 
 # Reverse another sublist within the linked list
-linked_list.reverse_between(0, 4)
+'''linked_list.reverse_between(0, 4)
 print("Reversed entire linked list: ")
 linked_list.print_list()
 
@@ -140,4 +153,4 @@ empty_list = LinkedList(0)
 empty_list.make_empty()
 empty_list.reverse_between(0, 0)
 print("Reversed empty linked list: ")
-empty_list.print_list()
+empty_list.print_list()'''
