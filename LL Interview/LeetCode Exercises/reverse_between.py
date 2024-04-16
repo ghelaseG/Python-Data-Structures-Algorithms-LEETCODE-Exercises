@@ -78,16 +78,22 @@ class LinkedList:
         self.length = 0
 
     def reverse_between(self, start_index, end_index):
+        # let's first check if the linked list is empty
         if self.length <= 1:
             return None
         
+        #now we create a dummy variable
+        ##in this variable, we can store our reversed sublist or reversed linked list, upon request
+        ###also helps simplifying our code
         dummy = Node(0)
+        #we point our dummy node to the head of the list
         dummy.next = self.head
+        #we give the previous node our dummy values
         previous_node = dummy
- 
+        #here we iterate until we reach the index before start_index
         for _ in range(start_index):
             previous_node = previous_node.next
-        
+        #here current will point to the next node, where the sublist starts to reverse
         current = previous_node.next
 
         for _ in range(end_index - start_index):
