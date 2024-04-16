@@ -111,16 +111,16 @@ class LinkedList:
         
         """second iteration, reversing at index 4, node 5
            node_to_move will next point to index 4, node 5
-           current.next(index2, node3) will point to index 5, node 6
+           current.next(index3, node4) will point to index 5, node 6
            node_to_move(index4, node5) will point to index 3, node 4
-           previous_node(index1, node 2) will point to index 4, node 5
+           previous_node(index2, node3) will point to index 4, node 5
            we get: 1 -> 2 -> 5 -> 4 -> 3 -> 6"""
         for _ in range(end_index - start_index):
             node_to_move = current.next
             current.next = node_to_move.next
             node_to_move.next = previous_node.next
             previous_node.next = node_to_move
-
+        #here we update the head of the linked list
         self.head = dummy.next
 
 linked_list = LinkedList(1)
