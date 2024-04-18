@@ -30,22 +30,15 @@ class DoublyLinkedList:
         return True
 
     def reverse(self):
-        if self.length == 0:
-            return None
+        #set the current node to head
+        current = self.head
         
-        dummy = Node(0)
-        dummy.next = self.head
-        previous_node = dummy.prev
+        while current is not None:
+            temp_next = current.next
 
-        for _ in range(self.length):
-            previous_node = previous_node.next
-            after = previous_node.next
+            current.next = current.prev
+            current.prev = temp_next
+            current = temp_next
 
-            new_node.prev = previous_node
-            new_node.next = after
-            previous_node.next = new_node
-            after.prev = new_node
-
-            self.head = dummy
-            self.tail = previous_node
+        self.head, self.tail = self.tail, self.head
 
