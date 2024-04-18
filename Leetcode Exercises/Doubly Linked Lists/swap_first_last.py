@@ -1,3 +1,12 @@
+"""
+Swap the values of the first and last node
+
+Method name:
+swap_first_last
+
+Note that the pointers to the nodes themselves are not swapped - only their values are exchanged.
+"""
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -33,14 +42,11 @@ class DoublyLinkedList:
         if self.head is None:
             return None
         
-        temp = self.head
+        current = self.head
+        last = self.tail
 
-        self.head = self.tail
-        self.tail = temp
+        if current is not None:
+            current.value = self.tail
+        if last is not None:
+            last.value = self.head
 
-        self.head = self.head.prev
-        self.tail = self.tail.next
-        self.head.prev = self.head.next
-        self.tail.next = self.head.prev
-
-        
