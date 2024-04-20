@@ -48,3 +48,19 @@ class DoublyLinkedList:
             new_node.prev = temp
         self.length += 1
         return True
+    
+    def swap_nodes(self):
+        temp = Node(0)
+        temp.next = self.head
+
+        current = temp
+
+        while current.next is not None and current.next.next is not None:
+            first_node = current.next
+            second_node = current.next.next
+            first_node.next = second_node.next
+            current.next = second_node
+            current.next.next = first_node
+            current = current.next.next
+
+        return temp.next
