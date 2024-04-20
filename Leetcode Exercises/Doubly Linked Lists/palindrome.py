@@ -38,14 +38,19 @@ class DoublyLinkedList:
         return True
     
     def is_palindrome(self):
+        # if the length of the list have only 1 number, then by definition it is a palindrome
         if self.length <= 1:
             return True
         
+        #we initialise 2 pointers, first and last node
         forward_node = self.head
         backward_node = self.tail
+        #as we compare the first with the last, the for loop iterates only half of the LL
         for _ in range(self.length // 2):
+            #if those values are different, we exit, as the list is not a palindrome, otherwise, it will return true
             if forward_node.value != backward_node.value:
                 return False
+        #here it will move one step forwerd, and backwards, then the loop it will start again, until we reach the half of it
         forward_node = forward_node.next
         backward_node = backward_node.prev
         return True
