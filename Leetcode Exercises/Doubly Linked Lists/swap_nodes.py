@@ -55,12 +55,20 @@ class DoublyLinkedList:
 
         current = temp
 
-        while current.next is not None and current.next.next is not None:
-            first_node = current.next
-            second_node = current.next.next
-            first_node.next = second_node.next
+        while self.head is not None and self.head.next is not None:
+            first_node = self.head
+            second_node = self.head.next
             current.next = second_node
-            current.next.next = first_node
-            current = current.next.next
-
-        return temp.next
+            first_node.next = second_node.next
+            second_node.next = first_node
+            second_node.prev = current
+            first_node.prev = second_node
+            
+            if first_node.next is not None:
+                first_node.next.prev = first_node
+            self.head = first_node.next
+            current = first_node
+            self.head = temp.next
+            
+            if self.head is not None:
+                self.head.prev = None
