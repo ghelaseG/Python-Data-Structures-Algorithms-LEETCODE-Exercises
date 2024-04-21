@@ -13,6 +13,7 @@ Favourite resources:
 - Github : [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
 - Youtube shorts : [Greg Hogg](https://youtube.com/@GregHogg?si=-yiRrGiBHYJrenKK)
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
+- 
 
 Patterns and constraints:
 
@@ -28,6 +29,7 @@ Freelance:
                     [Freelancer](https://www.freelancer.com/)
                     [Contra](https://contra.com)
                     [Peopleperhour](https://www.peopleperhour.com)
+                    [Weworkremotely](https://weworkremotely.com/)
 
 Interview prep:
 
