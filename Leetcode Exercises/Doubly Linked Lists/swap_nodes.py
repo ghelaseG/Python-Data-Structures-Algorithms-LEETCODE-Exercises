@@ -49,18 +49,37 @@ class DoublyLinkedList:
         self.length += 1
         return True
     
-    def swap_pairs(self):
+
+
+
+    def swap_pairs(self): 
+        """ Let's take this example: LL: 1 <-> 2 <-> 3 <-> 4"""
+        """
+        Here we initialise a dummy node(starting at value 0), and
+        we connect it to the LL, exp: 0 -> 1 <-> 2 <-> 3 <-> 4
+        """
         dummy = Node(0)
-        dummy.next = self.head
-
+        dummy.next = self.head #this simplifies the swapping process 
+        """
+        Previous pointer always points to the node just before the first node in the pair we're about to swap
+        """
         previous = dummy
-
+        """Let's check if we got at least 2 nodes in the LL"""
         while self.head is not None and self.head.next is not None:
+            """Let's assign 2 nodes, to be swapped"""
             first_node = self.head
             second_node = self.head.next
+            """previous node will point to the second node, exp: 0 -> 2,
+               this should point to the second node of the pair after swapping"""
             previous.next = second_node
+            """now we link through our first node(the end of our swapped pair) to the rest of the list,
+               exp: 2 <-> 1 -> 3 <-> 4"""
             first_node.next = second_node.next
+            """now we make the actual swap by reversing their next pointers, 
+               exp: 2 <-> 1 -> 3 <-> 4"""
             second_node.next = first_node
+            """let's update the previous pointers for a doubly ll,
+               exp: """
             second_node.prev = previous
             first_node.prev = second_node
             
@@ -73,3 +92,10 @@ class DoublyLinkedList:
             
         if self.head is not None:
             self.head.prev = None
+
+"""
+
+LL: 1 <-> 2 <-> 3 <-> 4
+Result: 2 <-> 1 <-> 4 <-> 3
+
+"""
