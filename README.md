@@ -10,10 +10,11 @@ Favourite resources:
 - FlowChart : [Algo Monster](https://algo.monster/flowchart)
 - Roadmap : [Neetcode](https://neetcode.io/roadmap)
 - Course : [Udemy](https://www.udemy.com/course/data-structures-algorithms-python/?couponCode=ST13MT40224)
-- Github : [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
+- Github resources: [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
 - Youtube shorts : [Greg Hogg](https://youtube.com/@GregHogg?si=-yiRrGiBHYJrenKK)
+- Youtube : [Abdul Bari](https://www.youtube.com/@abdul_bari)
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
-- 
+ 
 
 Patterns and constraints:
 
