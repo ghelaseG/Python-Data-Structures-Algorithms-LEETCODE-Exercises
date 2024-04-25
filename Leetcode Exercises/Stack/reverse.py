@@ -33,8 +33,19 @@ class Stack:
         else:
             return self.stack_list.pop()
         
-def reverse_string(string):
-    string = []
-    for i in range(len(string)-1, -1, -1):
-        print(string[i])
+def reverse_string(string): #this method is using a LIFO property
+    stack = Stack()
+    reverse_string = ""
+
+    for i in string: #we add in the stack all the elements
+        stack.push(i)
+
+    while not stack.is_empty(): #until the stack is empty, every popped element will go into the reverse string variable
+        reverse_string += stack.pop()
+    
+    return reverse_string
+
+my_string = 'hello'
+
+print(reverse_string(my_string))
 
