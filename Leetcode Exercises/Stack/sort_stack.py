@@ -36,15 +36,33 @@ class Stack:
             return self.stack_list.pop()
         
 def sort_stack(stack):
-    sorted_stack = Stack()
-    while not stack.is_empty:
+    #here we create a new stack to hold the sorted elements
+    new_stack = Stack()
+    #if the original stack is not empty, we remove the top element
+    while not stack.is_empty():
         temp = stack.pop()
+        #if the new stack is not empty and the top element is greater than the current element stored in temp
+        while not new_stack.is_empty() and new_stack.peek() > temp:
+            #we move the top element from the new stack to the original stack
+            stack.push(new_stack.pop())
+        #now we add the current element(from temp) to the new stack   
+        new_stack.push(temp)
+    #we then copy the sorted elements from the new stack to the original stack    
+    while not new_stack.is_empty():
+        stack.push(new_stack.pop())
         
-        while not sorted_stack.is_empty() and sorted_stack.peek() > temp:
-            stack.push(sorted_stack.pop())
-            
-        sorted_stack.push(temp)
-        
-    while not sorted_stack.is_empty():
-        stack.push(sorted_stack.pop())
-        
+
+my_stack = Stack()
+my_stack.push(3)
+my_stack.push(1)
+my_stack.push(5)
+my_stack.push(4)
+my_stack.push(2)
+
+print("Stack before sort_stack():")
+my_stack.print_stack()
+
+sort_stack(my_stack)
+
+print("\nStack after sort_stack:")
+my_stack.print_stack()
