@@ -20,13 +20,15 @@ class MyQueue:
         self.stack2 = []
 
     def enqueue(self, value):
+        #we store the value in a temporary variable
         temp = value
-        while not self.stack1 == None:
+        #if the main stack is not empty, then we add the elements in the second stack
+        while len(self.stack1) > 0:
             self.stack2.append(self.stack1.pop())
-        
+        #we then add the value in the first emptied stack1
         self.stack1.append(temp)
-
-        while not self.stack2 == None:
+        #we then loop through the second stack until it's empty and we add it back to the main stack
+        while len(self.stack2) > 0:
             self.stack1.append(self.stack2.pop())
 
     def peek(self):
