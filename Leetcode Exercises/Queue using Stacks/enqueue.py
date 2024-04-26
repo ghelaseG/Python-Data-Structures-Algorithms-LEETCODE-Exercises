@@ -21,12 +21,12 @@ class MyQueue:
 
     def enqueue(self, value):
         temp = value
-        while not self.stack1.is_empty():
+        while not self.stack1 == None:
             self.stack2.append(self.stack1.pop())
         
         self.stack1.append(temp)
 
-        while not self.stack2.is_empty():
+        while not self.stack2 == None:
             self.stack1.append(self.stack2.pop())
 
     def peek(self):
