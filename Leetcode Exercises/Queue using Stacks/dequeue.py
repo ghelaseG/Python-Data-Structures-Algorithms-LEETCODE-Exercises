@@ -17,16 +17,10 @@ class MyQueue:
             self.stack1.append(self.stack2.pop())
 
     def dequeue(self):
-        while len(self.stack1) == 0:
+        if self.is_empty():
             return None
-        temp = self.stack1[-1]
-        if len(self.stack1) == 1:
-            self.stack1 = None
         else:
-            self.stack1.pop()
-        return temp
-
-
+            return self.stack1.pop()
 
     def peek(self):
         return self.stack1[-1]
