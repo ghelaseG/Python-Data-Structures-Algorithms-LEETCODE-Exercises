@@ -5,7 +5,7 @@ class HashTable:
     def __hash(self, key):
         my_hash = 0
         for letter in key:
-            my_hash = (my_hash * ord(letter) * 23) % len(self.data_map)
+            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
         return my_hash
 
     def print_table(self):
@@ -17,6 +17,7 @@ class HashTable:
         if self.data_map[index] == None:    
             self.data_map[index] = []
         self.data_map[index].append([key, value])
+        
 
 my_hash_table = HashTable()
 

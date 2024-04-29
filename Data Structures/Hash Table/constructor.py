@@ -10,7 +10,7 @@ class HashTable:
             #we can use 23 or any other prime number
             #%(modulo operator) gives us the remainder when we divide
             #for example, our length is 7, so if we divide any number by 7, the remainder will be between 0 to 6 
-            my_hash = (my_hash * ord(letter) * 23) % len(self.data_map)
+            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
         return my_hash
     
     def print_table(self):
