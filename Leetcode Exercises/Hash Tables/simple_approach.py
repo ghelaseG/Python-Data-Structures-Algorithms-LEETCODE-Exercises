@@ -1,6 +1,6 @@
 # we got 2 lists, we need to check if we have any item in common
 
-
+#space complexity O(n^2) - inefficient
 def item_in_common(list1, list2):
     for i in list1:
         for j in list2:
