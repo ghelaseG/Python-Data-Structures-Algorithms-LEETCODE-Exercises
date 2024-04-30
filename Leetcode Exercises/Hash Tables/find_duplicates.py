@@ -6,7 +6,7 @@ def find_duplicates(nums):
     num_counts = {} #we first initialize a dict to count numbers
 
     for i in nums:
-        num_counts[i] = num_counts.get(num, 0) + 1 #here we check how many times each number appears in the list
+        num_counts[i] = num_counts.get(i, 0) + 1 #here we check how many times each number appears in the list
     
     duplicates = [] #here we store the duplicates
 
