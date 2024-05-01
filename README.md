@@ -35,4 +35,4 @@ Freelance:
 Interview prep:
 
 - Website : [Pramp](https://www.pramp.com/dashboard#/)
-- Book : [Cracking the coding interview](https://github.com/Avinash987/Coding/blob/master/Cracking-the-Coding-Interview-6th-Edition-189-Programming-Questions-and-Solutions.pdf)
+- Book : [Cracking the coding interview](https://www.amazon.co.uk/Cracking-Coding-Interview-6th-Programming/dp/0984782850)
