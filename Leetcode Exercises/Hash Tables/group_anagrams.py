@@ -6,3 +6,23 @@ For example, if the input array is ["eat", "tea", "tan", "ate", "nat", "bat"], t
 You need to implement the group_anagrams(strings) function and return a list of lists, where each inner list contains a group of anagrams according to the above requirements.
 """
 
+def group_anagrams(letters):
+    my_dict = {}
+
+    for letter in letters:
+        lst = [0] * 26
+        for char in letter:
+            lst[ord(char) - ord('a')] += 1
+        lst = tuple(lst)
+        my_dict[lst].append(char)
+    return my_dict.values()
+
+    
+print("1st set:")
+print( group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+
+print("\n2nd set:")
+print( group_anagrams(["abc", "cba", "bac", "foo", "bar"]))
+
+print("\n3rd set:")
+print( group_anagrams(["listen", "silent", "triangle", "integral", "garden", "ranged"]))
