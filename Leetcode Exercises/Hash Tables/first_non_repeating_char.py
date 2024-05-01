@@ -12,11 +12,11 @@ def first_non_repeating_char(letters):
     for letter in letters:
         check_letters[letter] = check_letters.get(letter, 0) + 1
 
-    for letter, count in check_letters.items():
-        if count == 1:
-            print(letter)
-        else:
-            return None
+    for letter in letters:
+        if check_letters[letter] == 1:
+            return letter
+        
+    return None
         
 
 print( first_non_repeating_char('leetcode') )
