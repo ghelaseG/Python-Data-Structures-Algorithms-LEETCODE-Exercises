@@ -1,7 +1,7 @@
 """
 Given an array of integers nums, find all the duplicates in the array using a hash table (dictionary).
 """
-
+#space and time complexity for this exercise is O(n)
 def find_duplicates(nums):
     num_counts = {} #we first initialize a dict to count numbers
 
