@@ -19,3 +19,12 @@ Output:
 A list of two integers representing the indices of the two numbers in the input array nums that add up to the target. If no two numbers in the input array add up to the target, return an empty list [].
 """
 
+def two_sum(nums, target):
+    prev = {} #here we store our value and index
+
+    for i, n in enumerate(nums):
+        diff = target - n
+        if diff in prev:
+            return [prev[diff], i]
+        diff[n] = i
+    return []
