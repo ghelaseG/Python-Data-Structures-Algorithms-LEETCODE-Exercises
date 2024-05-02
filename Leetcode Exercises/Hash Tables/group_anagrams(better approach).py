@@ -5,9 +5,12 @@ For example, if the input array is ["eat", "tea", "tan", "ate", "nat", "bat"], t
 
 You need to implement the group_anagrams(strings) function and return a list of lists, where each inner list contains a group of anagrams according to the above requirements.
 """
+# This is using a time and space complexity of O(m * n)/ O(n)
+
+from collections import defaultdict
 
 def group_anagrams(letters):
-    my_dict = {}
+    my_dict = defaultdict(list)
 
     for letter in letters:
         lst = [0] * 26
