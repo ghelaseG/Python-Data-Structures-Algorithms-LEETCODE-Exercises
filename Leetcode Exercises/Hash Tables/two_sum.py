@@ -20,11 +20,20 @@ A list of two integers representing the indices of the two numbers in the input 
 """
 
 def two_sum(nums, target):
-    prev = {} #here we store our value and index
+    prev = {} #here we store our value(key) and index(value)
 
-    for i, n in enumerate(nums):
-        diff = target - n
+    for ind, val in enumerate(nums):
+        diff = target - val
         if diff in prev:
-            return [prev[diff], i]
-        diff[n] = i
-    return []
+            return [prev[diff], ind] #here we return the index of the diff, and the current index
+        prev[val] = ind #otherwise,if the diff not in the dict, we add them
+    return [] #if none of this are happening, then we return an empty list
+
+print(two_sum([5,1,7,2,9,3], 10))
+print(two_sum([4,2,11,7,6,3], 9))
+print(two_sum([10,15,5,2,8,1,7], 12))
+print(two_sum([1,3,5,7,9], 10))
+print(two_sum([1,2,3,4,5], 10))
+print(two_sum([1,2,3,4,5], 7))
+print(two_sum([1,2,3,4,5], 3))
+print(two_sum([], 0))
