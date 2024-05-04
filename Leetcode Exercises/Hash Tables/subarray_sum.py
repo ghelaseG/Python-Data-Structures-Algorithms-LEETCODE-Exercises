@@ -12,8 +12,16 @@ Your function should return a list of two integers representing the starting and
 """
 
 def subarray_sum(nums, target):
-    mydict = {}
-    subarray = []
+    res = 0
+    curSum = 0
+    prefSum = {0:1}
 
-    for ind, val in enumerate(nums):
-        diff =
+    for i in nums:
+        curSum += i
+        diff = curSum - target
+
+        res += prefSum.get(diff, 0)
+        prefSum[curSum] = 1 + prefSum.get(curSum, 0)
+    
+    return res
+
