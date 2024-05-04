@@ -10,3 +10,10 @@ target: an integer representing the target sum
 
 Your function should return a list of two integers representing the starting and ending indices of the subarray that adds up to the target sum. If there is no such subarray, your function should return an empty list.
 """
+
+def subarray_sum(nums, target):
+    mydict = {}
+    subarray = []
+
+    for ind, val in enumerate(nums):
+        diff =
