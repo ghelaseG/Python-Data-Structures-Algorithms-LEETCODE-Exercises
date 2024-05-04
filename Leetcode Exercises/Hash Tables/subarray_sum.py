@@ -18,7 +18,8 @@ def subarray_sum(nums, target):
     #-1: shows that there's no subarray yet
     ## this setup helps handle special cases, for example when the first element itself is equal to the target
 
-    current_sum = 0 #here we keep track of the running sum, as we iterate through the array
+    #here we keep track of the running sum, as we iterate through the array
+    current_sum = 0 
 
     for i, num in enumerate(nums):
         current_sum += num #here we update the current sum by adding the current 'num'
@@ -30,13 +31,13 @@ def subarray_sum(nums, target):
             ##we return the indices as a list
             ###we add 1 to move past the element before the subarray starts
             ####i is the end index
-            return [sum_index[current_sum - target]+1, i]
-        
-        #if we haven't yet found it, we add the current sum and its index to our dict
+            return [sum_index[current_sum - target] + 1, i]
+
+            #if we haven't yet found it, we add the current sum and its index to our dict
         sum_index[current_sum] = i
 
-        #and if there's no subarray, we return an empty list
-        return []
+    #and if there's no subarray, we return an empty list
+    return []
     
 
 nums = [1, 2, 3, 4, 5]
