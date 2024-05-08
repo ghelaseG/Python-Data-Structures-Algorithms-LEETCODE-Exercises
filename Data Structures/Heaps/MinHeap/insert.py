@@ -21,3 +21,19 @@ class MinHeap:
         while current > 0 and self.heap[current] < self.heap[self._parent(current)]:
             self._swap(current, self._parent(current))
             current = self._parent(current)
+
+myheap = MinHeap()
+myheap.insert(12)
+myheap.insert(10)
+myheap.insert(8)
+myheap.insert(6)
+
+print(myheap.heap)
+
+myheap.insert(4)
+
+print(myheap.heap)
+
+myheap.insert(2)
+
+print(myheap.heap)
