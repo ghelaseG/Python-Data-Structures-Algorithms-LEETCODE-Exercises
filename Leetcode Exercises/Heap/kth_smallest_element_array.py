@@ -97,14 +97,19 @@ class MaxHeap:
     
 
 def find_kth_smallest(nums, k):
+    #here we initialize a new max heap
     max_heap = MaxHeap()
-
+    
     for num in nums:
+        #after we iterate we are adding each value into our heap
         max_heap.insert(num)
+        #now we check if the length of the heap is greater than k, if it is then we start removing the max value from the heap
         if len(max_heap.heap) > k:
+        #after going through the nums, the max heap contains the k number
+        #since it's a max heap, the root is the largest nr, which is k
             max_heap.remove()
-        
-        return max_heap.remove()
+    #then we simply return it by removing it        
+    return max_heap.remove()
         
 #Test cases
 nums = [[3,2,1,5,6,4],[6,5,4,3,2,1],[1,2,3,4,5,6],[3,2,3,1,2,4,5,5,6]]
