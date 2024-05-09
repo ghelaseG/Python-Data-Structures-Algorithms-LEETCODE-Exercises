@@ -94,3 +94,7 @@ class MaxHeap:
         self._sink_down(0)
 
         return max_value
+    
+
+def find_kth_smallest(nums, k):
+    
