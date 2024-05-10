@@ -97,11 +97,11 @@ class MaxHeap:
     
 def stream_max(nums):
     new_heap = MaxHeap()
-    max_heap = []
+    max_stream = []
 
     for num in nums:
         new_heap.insert(num)
-        max_heap.append(max_heap.heap[0])
+        max_stream.append(new_heap.heap[0])
     
     return
 
