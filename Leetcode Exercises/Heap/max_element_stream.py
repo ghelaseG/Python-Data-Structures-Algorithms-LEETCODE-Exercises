@@ -103,7 +103,12 @@ def stream_max(nums):
         new_heap.insert(num)
         max_stream.append(new_heap.heap[0])
     
-    return
+    return max_stream
+
+#this function works very simple,
+#imagine you play a game with your friends, and each one of you says a number, but you'll have to remember the highest number,
+#so you use maxHeap to store the numbers, and of course, maxHeap will help you see at the top the max value,
+#then you write the biggest number on a piece of paper
 
 
 test_cases = [
