@@ -20,6 +20,7 @@ Patterns and constraints:
 
 - Constraints : [AlgoMonster](https://www.youtube.com/watch?v=eB7SMsE6qEc&t=6s)
 - 14 Patterns : [Hackernoon](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+- 8 Patterns : [Sahil & Sarra](https://www.youtube.com/watch?v=xo7XrRVxH8Y&list=LL&index=2&t=9s&ab_channel=Sahil%26Sarra)
 
 Freelance:
 
