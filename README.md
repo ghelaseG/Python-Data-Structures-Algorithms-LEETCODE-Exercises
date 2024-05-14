@@ -11,8 +11,9 @@ Favourite resources:
 - Roadmap : [Neetcode](https://neetcode.io/roadmap)
 - Course : [Udemy](https://www.udemy.com/course/data-structures-algorithms-python/?couponCode=ST13MT40224)
 - Github resources: [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
-- Youtube shorts : [Greg Hogg](https://youtube.com/@GregHogg?si=-yiRrGiBHYJrenKK)
-- Youtube : [Abdul Bari](https://www.youtube.com/@abdul_bari)
+- YouTube shorts : [Greg Hogg](https://youtube.com/@GregHogg?si=-yiRrGiBHYJrenKK)
+- YouTube : [Abdul Bari](https://www.youtube.com/@abdul_bari)
+- YouTube : [Freecodecamp(Joy-Brock)](https://www.youtube.com/watch?v=fW_OS3LGB9Q&t=8s&ab_channel=freeCodeCamp.org)
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
  
 
