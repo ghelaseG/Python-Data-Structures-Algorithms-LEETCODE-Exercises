@@ -51,4 +51,41 @@ class BinarySearchTree:
     def is_balanced(self, node=None):
         def check_balance(node):
             if node is None:
-                
+                return True, -1
+            left_balanced, left_height = check_balance(node.left)
+            if not left_balanced:
+                return False, 0
+            right_balanced, right_height = check_balance(node.right)
+            if not right_balanced:
+                return False, 0
+            balanced = abs(left_height - right_height) <= 1
+            height = 1 + max(left_height, right_height)
+            return balanced, height
+        
+        balanced, _ = check_balance(self.root if node is None else node)
+        return balanced
+    
+    def inorder_traversal(self, node= None):
+        if node is None:
+            node = self.root
+        result = []
+        self._inorder_helper(node, result)
+        return result
+    
+    def _inorder_helper(self, node, result):
+        if node:
+            self._inorder_helper(node.left, result)
+            result.append(node.value)
+            self._inorder_helper(node.right, result)
+
+    def sorted_list_to_bst(self, nums):
+        self.root = self.__sorted_list_to_bst(nums, 0, len(nums) - 1)
+
+    def __sorted_list_to_bst(self, nums, left, right):
+        # Description:                                       |
+        #   | - Private method to convert a sorted list to a     |
+        #   |   binary search tree (BST).                        |
+        #   | - The method uses the middle element of the list   |
+        #   |   as the root to ensure balanced height. 
+    
+    
