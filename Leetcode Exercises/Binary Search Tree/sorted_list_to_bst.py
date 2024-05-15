@@ -87,6 +87,16 @@ class BinarySearchTree:
         #   |   binary search tree (BST).                        |
         #   | - The method uses the middle element of the list   |
         #   |   as the root to ensure balanced height. 
+        if left > right:
+            return None
+        
+        m = (left + right) // 2
+        root = Node(nums[m])
+        root.left = __sorted_list_to_bst(left, m-1)
+        root.right = __sorted_list_to_bst(m + 1, right)
+        return root
+    
+    return __sorted_list_to_bst(0, len(nums) - 1)
     
 
 def check_balanced_and_correct_traversal(bst, expected_traversal):
