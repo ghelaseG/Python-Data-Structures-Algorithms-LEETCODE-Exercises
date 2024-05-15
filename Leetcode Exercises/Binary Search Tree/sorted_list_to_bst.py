@@ -91,11 +91,12 @@ class BinarySearchTree:
         if left > right:
             return None
         #now let's find mid elem
+        #this step is crucial for creating a balanced BST
         mid = (left + right) // 2
         current = Node(nums[mid]) #create node with mid elem
         #construct left and right subtree
-        current.left = self.__sorted_list_to_bst(left, mid - 1)
-        current.right = self.__sorted_list_to_bst(mid + 1, right)
+        current.left = self.__sorted_list_to_bst(nums, left, mid - 1)
+        current.right = self.__sorted_list_to_bst(nums, mid + 1, right)
         return current
     
 
