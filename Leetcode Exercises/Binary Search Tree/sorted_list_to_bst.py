@@ -88,4 +88,45 @@ class BinarySearchTree:
         #   | - The method uses the middle element of the list   |
         #   |   as the root to ensure balanced height. 
     
-    
+
+def check_balanced_and_correct_traversal(bst, expected_traversal):
+    is_balanced = bst.is_balanced()
+    inorder = bst.inorder_traversal()
+    print("Is balanced:". is_balanced)
+    print("Inorder traversal:", inorder)
+    print('Expected traversal:', expected_traversal)
+    if is_balanced and inorder == expected_traversal:
+        print("PASS: Tree is balanced and inorder traversal is correct. \n")
+    else:
+        print("FAIL: Tree is either not balanced or inorder traversal is incorrect.\n")
+
+# Test 1: convert an empty list
+print("\n---- Test: Convert Empty List ----\n")
+bst = BinarySearchTree()
+bst.sorted_list_to_bst([])
+check_balanced_and_correct_traversal(bst, [])
+
+# Test 2: convert a list with one element
+print("\n---- Test: Convert single element list -----\n")
+bst = BinarySearchTree()
+bst.sorted_list_to_bst([10])
+check_balanced_and_correct_traversal(bst, [10])
+
+# Test 3: convert a sorted list with odd number of elements
+print("\n---- Test: Convert sorted list with odd number of elements -----\n")
+bst = BinarySearchTree()
+bst.sorted_list_to_bst([1,2,3,4,5])
+check_balanced_and_correct_traversal(bst, [1,2,3,4,5])
+
+#Test 4: convert a list with even number of elements
+print("\n---- Test: Convert sorted list with even number of elements -----\n")
+bst = BinarySearchTree()
+bst.sorted_list_to_bst([1,2,3,4,5,6])
+check_balanced_and_correct_traversal(bst, [1,2,3,4,5,6])
+
+#Test 5: convert a larger sorted list
+print("\n---- Test: Convert large sorted list -----\n")
+bst = BinarySearchTree()
+large_sorted_list = list(range(1, 16))
+bst.sorted_list_to_bst(large_sorted_list)
+check_balanced_and_correct_traversal(bst, large_sorted_list)
