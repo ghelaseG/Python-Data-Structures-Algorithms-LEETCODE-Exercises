@@ -94,8 +94,8 @@ class BinarySearchTree:
         mid = (left + right) // 2
         current = Node(nums[mid]) #create node with mid elem
         #construct left and right subtree
-        current.left = __sorted_list_to_bst(left, mid - 1)
-        current.right = __sorted_list_to_bst(mid + 1, right)
+        current.left = self.__sorted_list_to_bst(left, mid - 1)
+        current.right = self.__sorted_list_to_bst(mid + 1, right)
         return current
     
 
