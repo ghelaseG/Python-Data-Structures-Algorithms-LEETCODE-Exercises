@@ -15,4 +15,13 @@ Note: This problem requires understanding binary trees, recursion, and the abili
 """
 
 def __invert_tree(self, node):
+    if not node:
+        return None
     
+    temp = self.left
+    self.left = self.right
+    self.right = temp
+
+    self.__invert_tree(self.left)
+    self.__invert_tree(self.right)
+    return node
