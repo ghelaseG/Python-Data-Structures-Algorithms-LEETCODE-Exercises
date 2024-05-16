@@ -87,19 +87,30 @@ class BinarySearchTree:
         #   |   binary search tree (BST).                        |
         #   | - The method uses the middle element of the list   |
         #   |   as the root to ensure balanced height. 
+
         #let's check if the sublist is empty
+        #this means that we considered all the elements in this segment
         if left > right:
             return None
+        
         #now let's find mid elem
         #this step is crucial for creating a balanced BST
         mid = (left + right) // 2
-        current = Node(nums[mid]) #create node with mid elem
-        #construct left and right subtree
+
+        #create node with mid elem
+        #this node becomes the root of the BST, and allows the BST to be balanced
+        current = Node(nums[mid]) 
+
+        #recursively construct left and right subtree
+        ##the way this works, the function calls itself by adjusting the segment to the left or right
+        ###beyond the middle element
         current.left = self.__sorted_list_to_bst(nums, left, mid - 1)
         current.right = self.__sorted_list_to_bst(nums, mid + 1, right)
+
+        #in the context of recursive calls, this step effectively builds up the tree from bottom to top
         return current
     
-
+#Test code below will print output to 'User logs'
 def check_balanced_and_correct_traversal(bst, expected_traversal):
     is_balanced = bst.is_balanced()
     inorder = bst.inorder_traversal()
