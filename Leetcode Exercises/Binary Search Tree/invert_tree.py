@@ -42,15 +42,16 @@ class BinarySearchTree:
         self.root = self.__invert_tree(self.root)
 
     def __invert_tree(self, node):
-        if not node:
+        if node is None:
             return None
+        
+        #save the current nodes left child in a temp variable
+        temp_var = node.left
+        #assign the result of recursively inverting the right to the left
+        node.left = self.__invert_tree(node.right)
+        node.right = self.__invert_tree(temp_var)
     
-        temp = self.left
-        self.left = self.right
-        self.right = temp
-
-        self.__invert_tree(self.left)
-        self.__invert_tree(self.right)
+        
         return node
         
 
