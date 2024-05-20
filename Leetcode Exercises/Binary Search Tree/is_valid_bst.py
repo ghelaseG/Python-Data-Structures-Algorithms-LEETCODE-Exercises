@@ -11,8 +11,8 @@ If all node values are sorted in ascending order, the method should return True,
 class Node:
     def __init__(self, value):
         self.value = value
-        self.right = None
         self.left = None
+        self.right = None
 
 class BinarySearchTree:
     def __init__(self):
@@ -31,6 +31,7 @@ class BinarySearchTree:
                 if temp.left is None:
                     temp.left = new_node
                     return True
+                temp = temp.left
             else:
                 if temp.right is None:
                     temp.right = new_node
@@ -52,6 +53,8 @@ class BinarySearchTree:
         temp_results = self.dfs_in_order()
         if temp_results == sorted(temp_results):
             return True
+        
+#time complexity: O(n log n)
         
 my_tree = BinarySearchTree()
 my_tree.insert(47)
