@@ -51,10 +51,12 @@ class BinarySearchTree:
 
     def is_valid_bst(self):
         temp_results = self.dfs_in_order()
-        if temp_results == sorted(temp_results):
-            return True
+        for i in range(1, len(temp_results)):
+            if temp_results[i] <= temp_results[i-1]:
+                return False
+        return True
         
-#time complexity: O(n log n)
+#time complexity: O(n)
         
 my_tree = BinarySearchTree()
 my_tree.insert(47)
