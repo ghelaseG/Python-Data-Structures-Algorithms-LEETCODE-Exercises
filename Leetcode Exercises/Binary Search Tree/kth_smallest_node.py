@@ -39,40 +39,69 @@ class BinarySearchTree:
                     temp.right = new_node
                     return True
                 temp = temp.right
-    
-    def kth_smallest(self, k):
-        #create stack to keep track of the nodes
-        stack = []
-        #we set this node to the root of the tree
-        node = self.root
+# ITERATIVE
+    # def kth_smallest(self, k):
+    #     #create stack to keep track of the nodes
+    #     stack = []
+    #     #we set this node to the root of the tree
+    #     node = self.root
 
-        #here we traverse in-order(left, root, right)
-        while stack or node:
-            while node:
-                stack.append(node)
-                node = node.left
-            #pop a node from the stack and decrement k
-            node = stack.pop()
-            k -=  1
-            #if k is zero then we just found the smallest element
-            if k == 0:
-                return node.value
-            #otherwise we traverse the right side
-            node = node.right
-        #in worst case we return none
+    #     #here we traverse in-order(left, root, right)
+    #     while stack or node:
+    #         while node:
+    #             stack.append(node)
+    #             node = node.left
+    #         #pop a node from the stack and decrement k
+    #         node = stack.pop()
+    #         k -=  1
+    #         #if k is zero then we just found the smallest element
+    #         if k == 0:
+    #             return node.value
+    #         #otherwise we traverse the right side
+    #         node = node.right
+    #     #in worst case we return none
+    #     return None
+
+# RECURSIVE
+    def kth_smallest(self, k):
+        #initialise the number of nodes visited to 0
+        self.kth_smallest_count = 0
+        #call the helper function with the root node and k
+        return self.kth_smallest_helper(self.root, k)
+        
+    def kth_smallest_helper(self, node, k):
+        if node is None:
+            return None
+        
+        #recursively call the helper function on the left child of the node and store the result in left result
+        left_result = self.kth_smallest_helper(node.left, k)
+        if left_result is not None:
+            #if none, return it
+            return left_result
+            
+        #increment the number of nodes visited by 1
+        self.kth_smallest_count += 1
+        if self.kth_smallest_count == k:
+            #if the kth smallest elem is found, return the val of current node
+            return node.value
+            
+        #recursively call the helper function on the right child of the node and store the result in right result
+        right_result = self.kth_smallest_helper(node.right, k)
+        if right_result is not None:
+            return right_result
+            
+        #if the kth smallest elem is not found, then ret none
         return None
 
+gg = BinarySearchTree()
+gg.insert()
+gg.insert()
+gg.insert()
+gg.insert()
+gg.insert()
+gg.insert()
+gg.insert()
 
-
-bst = BinarySearchTree()
-bst.insert()
-bst.insert()
-bst.insert()
-bst.insert()
-bst.insert()
-bst.insert()
-bst.insert()
-
-print(bst.kth_smallest(1))
-print(bst.kth_smallest(3))
-print(bst.kth_smallest(6))
+print(gg.kth_smallest(1))
+print(gg.kth_smallest(3))
+print(gg.kth_smallest(6))
