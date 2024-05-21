@@ -41,18 +41,26 @@ class BinarySearchTree:
                 temp = temp.right
     
     def kth_smallest(self, k):
-        def dfs_in_order(self):
-            results = []
-            def traverse(current_node):
-                if current_node.left is not None:
-                    traverse(current_node.left)
-                results.append(current_node.value)
-                if current_node.right is not None:
-                    traverse(current_node.right)
-            traverse(self.root)
-            for i in results:
-                if results[i] == k:
-                    return i
+        #create stack to keep track of the nodes
+        stack = []
+        #we set this node to the root of the tree
+        node = self.root
+
+        #here we traverse in-order(left, root, right)
+        while stack or node:
+            while node:
+                stack.append(node)
+                node = node.left
+            #pop a node from the stack and decrement k
+            node = stack.pop()
+            k -=  1
+            #if k is zero then we just found the smallest element
+            if k == 0:
+                return node.value
+            #otherwise we traverse the right side
+            node = node.right
+        #in worst case we return none
+        return None
 
 
 
