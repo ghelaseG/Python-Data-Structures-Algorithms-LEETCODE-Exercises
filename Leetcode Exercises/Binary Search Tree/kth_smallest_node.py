@@ -15,11 +15,12 @@ class Node:
         self.value = value
         self.left = None
         self.right = None
+        
 
 class BinarySearchTree:
     def __init__(self):
         self.root = None
-    
+
     def insert(self, value):
         new_node = Node(value)
         if self.root is None:
@@ -34,7 +35,7 @@ class BinarySearchTree:
                     temp.left = new_node
                     return True
                 temp = temp.left
-            else:
+            else: 
                 if temp.right is None:
                     temp.right = new_node
                     return True
@@ -94,13 +95,13 @@ class BinarySearchTree:
         return None
 
 gg = BinarySearchTree()
-gg.insert()
-gg.insert()
-gg.insert()
-gg.insert()
-gg.insert()
-gg.insert()
-gg.insert()
+gg.insert(5)
+gg.insert(3)
+gg.insert(7)
+gg.insert(2)
+gg.insert(4)
+gg.insert(6)
+gg.insert(8)
 
 print(gg.kth_smallest(1))
 print(gg.kth_smallest(3))
