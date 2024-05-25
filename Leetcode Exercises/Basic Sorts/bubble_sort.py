@@ -91,20 +91,19 @@ class LinkedList:
         self.length += 1
 
     def bubble_sort(my_list):
-        made_swap = True
-        n = len(my_list)
-
-        while made_swap:
-            made_swap = False
-
-            for i in range(n-1):
-                if my_list[i] > my_list[i + 1]:
-                    temp = my_list[i]
-                    my_list[i] = my_list[i+1]
-                    my_list[i+1] = temp
-                    made_swap = True
+        if self.length < 2:
+            return
         
-        return my_list
+        sorted_until = None
+        
+        while sorted_until != self.head.next:
+            current = self.head
+            while current.next != sorted_until:
+                next_node = current.next
+                if current.value > next_node.value:
+                    current.value, next_node.value = next_node.value, current.value
+                current = current.next
+            sorted_until = current
 
 
 
