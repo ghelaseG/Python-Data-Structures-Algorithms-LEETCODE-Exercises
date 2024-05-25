@@ -15,6 +15,7 @@ Favourite Resources:
 - YouTube : [Abdul Bari](https://www.youtube.com/@abdul_bari)
 - YouTube : [Freecodecamp(Joy-Brock)](https://www.youtube.com/watch?v=fW_OS3LGB9Q&t=8s&ab_channel=freeCodeCamp.org)
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
+- Maths : [Sahil & Sarra](https://www.youtube.com/watch?v=iF0I2SPk5JU&ab_channel=Sahil%26Sarra)
  
 
 Patterns and Constraints:
