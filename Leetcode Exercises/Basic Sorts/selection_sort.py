@@ -73,6 +73,18 @@ class LinkedList:
         self.length += 1
     
     def selection_sort(self):
+        if self.length < 2:
+            return
+        
+        sorted_until = None
+
+        while sorted_until != self.head.next:
+            current = self.head
+
+            while current.next != sorted_until
+
+        
+
 
 
 my_linked_list = LinkedList(4)
