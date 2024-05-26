@@ -76,12 +76,15 @@ class LinkedList:
         if self.length < 2:
             return
         
-        sorted_until = None
+        current = self.head
+        temp = current.next
 
-        while sorted_until != self.head.next:
-            current = self.head
-
-            while current.next != sorted_until
+        while current:
+            if temp < current:
+                temp, current = current, temp
+            current = current.next
+        
+        return
 
         
 
