@@ -90,19 +90,26 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
 
-    def bubble_sort(my_list):
+    def bubble_sort(self):
+        #if the list is small (0 or 1 elem), we do not have to sorted
         if self.length < 2:
             return
-        
+        #this variable will check which part of the list is sorted
         sorted_until = None
-        
+        #this outer loop iterates as long as the second element of the list is not equal to sorted_until
         while sorted_until != self.head.next:
+            #this variable will be used to traverse the list
             current = self.head
+            #the inner loop is where the sorting happens
             while current.next != sorted_until:
                 next_node = current.next
+                #if this statement is true, then we have to swap the elements as it is the wrong order
                 if current.value > next_node.value:
                     current.value, next_node.value = next_node.value, current.value
+                #after swapping, current is going to the next node
                 current = current.next
+            #here we update the sorted_until after each loop,
+            ##shrinking the unsorted section accordingly
             sorted_until = current
 
 
