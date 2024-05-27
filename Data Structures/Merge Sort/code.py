@@ -38,3 +38,6 @@ sorted_list = merge_sort(original_list)
 print('Original List:', original_list)
 
 print('\nSorted List:', sorted_list)
+
+
+# Time complexity is O(n log n), better than previous sorting algo with O(n^2) - bubble sort, selection or insertion sort
