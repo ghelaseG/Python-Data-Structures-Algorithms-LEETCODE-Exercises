@@ -81,11 +81,15 @@ class LinkedList:
         if self.length < 2:
             return
         
-        current = self.head
-        unsorted_elem = self.head.next
+        sorted_list_head = self.head
+        unsorted_list_head = self.head.next
         
-        while unsorted_elem.next is not None:
-            if unsorted_elem < current:
+        sorted_list_head.next = None
+        
+        while unsorted_list_head is not None:
+            if unsorted_list_head < sorted_list_head:
+                search_pointer = 
+                current = 
                 unsorted_elem, current = current, unsorted_elem
             current = current.next
             
