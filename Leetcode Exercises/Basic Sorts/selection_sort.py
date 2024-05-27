@@ -77,7 +77,9 @@ class LinkedList:
             return
         
         current = self.head
-
+        #in this loop, current iterates until the second to last node
+        ##we do this because on each pass, the smallest unsorted element
+        ###is selected and moved to the beginning of the unsorted portion
         while current.next is not None:
             smallest = current
             inner_current = current.next
@@ -86,13 +88,10 @@ class LinkedList:
                     smallest = inner_current
                 inner_current = inner_current.next
             if smallest != current:
+                #we use python tuple unpacking syntax
                 current.value, smallest.value = smallest.value, current.value
             current = current.next
         
-        return
-
-        
-
 
 
 my_linked_list = LinkedList(4)
