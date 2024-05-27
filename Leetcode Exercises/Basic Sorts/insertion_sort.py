@@ -78,6 +78,20 @@ class LinkedList:
         self.length += 1
 
     def insertion_sort(self):
+        if self.length < 2:
+            return
+        
+        current = self.head
+        unsorted_elem = self.head.next
+        
+        while unsorted_elem.next is not None:
+            if unsorted_elem < current:
+                unsorted_elem, current = current, unsorted_elem
+            current = current.next
+            
+        return
+        
+
 
 
 my_linked_list = LinkedList(4)
