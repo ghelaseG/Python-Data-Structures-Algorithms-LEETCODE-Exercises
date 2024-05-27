@@ -88,9 +88,6 @@ class LinkedList:
             if smallest != current:
                 current.value, smallest.value = smallest.value, current.value
             current = current.next
-            
-            
-            
         
         return
 
