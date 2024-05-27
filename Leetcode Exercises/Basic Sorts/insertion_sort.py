@@ -83,22 +83,30 @@ class LinkedList:
         
         sorted_list_head = self.head
         unsorted_list_head = self.head.next
-        
+        #here we disconnect this pointer from the rest of the list
         sorted_list_head.next = None
         
+        #we iterate through the unsorted list
         while unsorted_list_head is not None:
             current= unsorted_list_head
             unsorted_list_head = unsorted_list_head.next
-            
+            #if the statement is true, current(unsorted_list_head) become the sorted_list_head node
             if current.value < sorted_list_head.value:
                 current.next = sorted_list_head
                 sorted_list_head = current
             else:
+                #otherwise the function searches through the sorted part of the list
+                ##to find the correct position to insert the current node
                 search_pointer = sorted_list_head
+                #the search is done using search_pointer, 
+                ##the search pointer is moved until reaches the last node with a smaller value
+                ###than the current node
+                ####once that is found, current node is inserted in the sorted part of the list
                 while search_pointer.next is not None and current.value > search_pointer.next.value:
                     search_pointer = search_pointer.next
                 current.next = search_pointer.next
                 search_pointer.next = current
+        #in this last block of code, we update the head and tail attributes of the LL
         self.head = sorted_list_head
         temp = self.head
         while temp.next is not None:
