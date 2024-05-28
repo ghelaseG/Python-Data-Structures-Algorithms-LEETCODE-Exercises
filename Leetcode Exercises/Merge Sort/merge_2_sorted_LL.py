@@ -96,8 +96,27 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
 
-    def merge(other_list):
-
+    def merge(self, other_list):
+        other_head = self.head(other_list)
+        dummy = Node(0)
+        current = self.dummy
+        
+        while self.head and other_head is not None:
+            if self.head < other_head:
+                current.next = self.head
+                self.head = self.head.next
+            else:
+                current.next = other_head
+                other_head = other_head.next
+            current = current.next
+        
+        if self.head is not None:
+            current.next = self.head
+        else:
+            current.next = other_head
+            sefl.tail = self.tail(other_list)
+        
+        self.head = self.dummy.next
 
 l1 = LinkedList(1)
 l1.append(3)
