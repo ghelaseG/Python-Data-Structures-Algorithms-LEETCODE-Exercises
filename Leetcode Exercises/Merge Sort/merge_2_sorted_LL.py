@@ -96,27 +96,39 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
 
+    #this method is available only if both lists are sorted
     def merge(self, other_list):
-        other_head = self.head(other_list)
-        dummy = Node(0)
-        current = self.dummy
-        
-        while self.head and other_head is not None:
-            if self.head < other_head:
-                current.next = self.head
+        other_head = other_list.head
+        dummy = Node(0) #we use this dummy node to hold the merged list
+        current = dummy
+        #loop while both lists have nodes
+        while self.head is not None and other_head is not None:
+            #compare the value of the first nodes in both lists
+            if self.head.value < other_head.value:
+                #in the first list, the smaller value is added to the current node
+                ##and move to the next node
+                current.next = self.head 
                 self.head = self.head.next
             else:
+                #for the second list, add the value and move to the next
                 current.next = other_head
                 other_head = other_head.next
+            #move current node to the next position
             current = current.next
         
+        #if the first list has any nodes left, add them to current
         if self.head is not None:
             current.next = self.head
         else:
+            #if the second list has nodes left, add them to current
             current.next = other_head
-            sefl.tail = self.tail(other_list)
+            #update the tail of the merged list to be the tail of the second list
+            self.tail = other_list.tail
         
-        self.head = self.dummy.next
+        #set the head of the merged list to the next node after the dummy 
+        self.head = dummy.next
+        #update the length of the merged list
+        self.length += other_list.length
 
 l1 = LinkedList(1)
 l1.append(3)
