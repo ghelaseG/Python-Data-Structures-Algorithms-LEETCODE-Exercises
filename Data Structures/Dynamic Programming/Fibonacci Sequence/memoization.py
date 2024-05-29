@@ -21,7 +21,7 @@ def fib(n):
     return memo[n]
 
 
-n = 32
+n = 35
 
 print('Fib of', n, '=', fib(n))
 print('Counter:', counter) #O(2n -1)
