@@ -24,3 +24,9 @@ def quick_sort(my_list):
     return quick_sort_helper(my_list, 0, len(my_list)-1)
 
 print(quick_sort([4,6,1,7,3,2,5]))
+
+# Big O:
+"""
+if the data is sorted, the time complexity will be O(n^2), so it is better to use something else, for example: insertion sort 
+otherwise, if the list is not sorted, the time complexity is O(n log n)
+"""
