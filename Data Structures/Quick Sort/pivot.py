@@ -15,6 +15,6 @@ def pivot(my_list, pivot_index, end_index):
 
 my_list = [4,6,1,7,3,2,5]
 
-print(pivot(my_list, 0, 6))
+print(pivot(my_list,0,6))
 
 print(my_list)
