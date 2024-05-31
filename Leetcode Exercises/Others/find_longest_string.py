@@ -3,11 +3,11 @@ Write a Python function called find_longest_string that takes a list of strings 
 """
 
 def find_longest_string(myList):
+    longest_string = ""
     for i in myList:
-        if len(myList[0]) > len(myList[i]):
-            return myList[0]
-        else:
-            return myList[i]
+        if len(i) > len(longest_string):
+            longest_string = i
+    return longest_string
         
 string_list = ['apple', 'banana', 'kiwi', 'pear']
 longest = find_longest_string(string_list)
