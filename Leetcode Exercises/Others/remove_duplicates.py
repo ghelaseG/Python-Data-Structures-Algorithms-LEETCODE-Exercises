@@ -25,11 +25,16 @@ Explanation: The function modifies the original list nums in-place, moving uniqu
 """
 
 def remove_duplicates(myList):
-    myList = sorted(myList)
-    for i in myList:
-        if myList.index(i).value == myList.index(i+1).value:
-            myList.pop(i)
-    return myList
+    if not myList:
+        return 0
+    
+    write_pointer = 1
+
+    for i in range(1, len(myList)):
+        if myList[i] != myList[i-1]:
+            myList[write_pointer] = myList[i]
+            write_pointer += 1
+    return write_pointer
     
 
 
