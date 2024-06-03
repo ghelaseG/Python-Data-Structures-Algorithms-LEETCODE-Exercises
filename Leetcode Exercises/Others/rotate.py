@@ -58,3 +58,5 @@ nums = [1, 2, 3, 4, 5, 6, 7]
 k = 3
 rotate(nums, k)
 print("Rotated array:", nums)
+
+#we using space complexity O(1), and time complexity O(n)
