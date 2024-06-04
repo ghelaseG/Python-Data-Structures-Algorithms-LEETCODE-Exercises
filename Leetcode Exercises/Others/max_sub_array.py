@@ -31,6 +31,9 @@ Explanation: The contiguous subarray [4, -1, 2, 1] has the largest sum, which is
 # more explanation at https://www.youtube.com/watch?v=5WZl3MMT0Eg&t=16s&ab_channel=NeetCode
 #time complexity O(n) using sliding windon technique
 def max_subarray(nums):
+    if not nums:
+        return 0
+    
     maxSub = nums[0]
     curSum = 0
 
