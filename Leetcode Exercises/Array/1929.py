@@ -32,4 +32,8 @@ n == nums.length
 
 class Solution:
     def getConcatenation(self, nums: List[int]) -> List[int]:
-        
+        new_array = []
+        for i in nums:
+            if i >= 0:
+                new_array += i
+        return nums + new_array 
