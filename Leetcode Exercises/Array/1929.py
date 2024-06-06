@@ -35,5 +35,5 @@ class Solution:
         new_array = []
         for i in nums:
             if i >= 0:
-                new_array += i
+                new_array.append(i)
         return nums + new_array 
