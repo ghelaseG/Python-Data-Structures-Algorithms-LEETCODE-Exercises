@@ -38,5 +38,6 @@ class Solution:
         ans = []
         #getting the indexes
         for i in range(len(nums)):
-            ans[i] = nums[nums[i]]
-        return ans 
+            new_val = nums[nums[i]]
+            ans.append(new_val)
+        return ans   
