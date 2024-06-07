@@ -34,5 +34,20 @@ Follow-up: Can you solve it without using an extra space (i.e., O(1) memory)?
 """
 
 class Solution:
-    def buildArray(self, nums: List[int]) -> List[int]:
+    def buildArray(self, nums: list[int]) -> list[int]:
         return [nums[i] for i in nums]
+
+
+solvee = Solution()
+print(solvee.buildArray(nums=[0,2,1,5,3,4]))
+
+"""
+the way this program runs, is as follows:
+nums = [0,2,1,5,3,4]
+nums[0] = 0 -> nums[0] = 0
+nums[1] = 2 -> nums[2] = 1
+nums[2] = 1 -> nums[1] = 2
+nums[3] = 5 -> nums[5] = 4
+nums[4] = 3 -> nums[3] = 5
+nums[5] = 4 -> nums[4] = 3
+"""
