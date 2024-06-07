@@ -35,9 +35,4 @@ Follow-up: Can you solve it without using an extra space (i.e., O(1) memory)?
 
 class Solution:
     def buildArray(self, nums: List[int]) -> List[int]:
-        ans = []
-        #getting the indexes
-        for i in range(len(nums)):
-            new_val = nums[nums[i]]
-            ans.append(new_val)
-        return ans   
+        return [nums[i] for i in nums]
