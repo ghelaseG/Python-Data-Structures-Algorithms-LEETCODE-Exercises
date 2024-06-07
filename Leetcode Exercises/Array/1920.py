@@ -32,3 +32,8 @@ The elements in nums are distinct.
 
 Follow-up: Can you solve it without using an extra space (i.e., O(1) memory)?
 """
+
+class Solution:
+    def buildArray(self, nums: List[int]) -> List[int]:
+        ans[i] = [i for i in nums[nums[i]]]
+        return ans
