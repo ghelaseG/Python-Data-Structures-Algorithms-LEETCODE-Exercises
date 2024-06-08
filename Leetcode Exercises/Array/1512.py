@@ -31,4 +31,16 @@ from typing import List
 
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        return [x for x,y in zip(nums) if x == y]
+        #first we make sure we add 1 for each pair in this variable count
+        count = 0
+        #then we iterate to get the index, so we can use nums[index] etc
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                #then we make sure that we use i < j, otherwise will count the first pairs, so it will show double or even more
+                if nums[i] == nums[j] and i < j:
+                    count += 1
+        return count
+    
+exp = Solution()
+print(exp.numIdenticalPairs(nums=[1,2,3,1,1,3]))
+#in this exp, there are 4 pairs: (0,3), (0,4), (3,4), (2,5) 0-indexed.
