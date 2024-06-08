@@ -31,8 +31,4 @@ from typing import List
 
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        count = 0
-        for i,j in enumerate(nums):
-            if nums[i] == nums[j]:
-                count += 1
-                return count
+        return [x for x,y in zip(nums) if x == y]
