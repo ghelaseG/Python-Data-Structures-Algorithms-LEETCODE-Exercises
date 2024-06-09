@@ -12,8 +12,12 @@ from typing import List
 class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         X = 0
-        if operations == '--X' or operations == 'X--':
-            X -= 1
-        elif operations == '++X' or operations == 'X++':
-            X += 1
+        for X in range(len(operations) + 1):
+            if operations == '--X' or operations == 'X--':
+                X -= 1
+            elif operations == '++X' or operations == 'X++':
+                X += 1
         return X
+
+exp = Solution()
+print(exp.finalValueAfterOperations(operations = ["--X","X++","X++"]))
