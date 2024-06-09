@@ -7,6 +7,13 @@ Initially, the value of X is 0.
 
 Given an array of strings operations containing a list of operations, return the final value of X after performing all the operations.
 """
+from typing import List
 
 class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
+        X = 0
+        if operations == '--X' or operations == 'X--':
+            X -= 1
+        elif operations == '++X' or operations == 'X++':
+            X += 1
+        return X
