@@ -8,7 +8,10 @@ In other words, we want to find the largest value in every contiguous 3 x 3 matr
 
 Return the generated matrix.
 """
+#based on this video we can use convolution or ffts: https://www.youtube.com/watch?v=MYYvjvvqj-4&ab_channel=ProgrammingLivewithLarry
+##here is a helpful video about convolution: https://www.youtube.com/watch?v=KuXjwB4LzSA&ab_channel=3Blue1Brown
+
+from typing import List
 
 class Solution:
     def largestLocal(self, grid: List[List[int]]) -> List[List[int]]:
-        
