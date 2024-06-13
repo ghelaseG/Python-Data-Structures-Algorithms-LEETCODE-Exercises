@@ -45,7 +45,7 @@ from typing import List
 
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
-        result = (sum(i) for i in zip(*accounts))
+        result = (sum(i for i in second_list) for second_list in accounts)
         return max(result)
     
 example = Solution()
