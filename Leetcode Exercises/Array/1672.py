@@ -35,7 +35,15 @@ n == accounts[i].length
 1 <= m, n <= 50
 1 <= accounts[i][j] <= 100
 """
+
+"""
+The map() function executes a specified function for each item in an iterable. The item is sent to the function as a parameter.
+A lambda function is a small anonymous function.
+"""
+
 from typing import List
 
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
+        result = max(map(lambda *x: sum(x), *accounts))
+        return result
