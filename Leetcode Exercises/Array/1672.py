@@ -45,5 +45,8 @@ from typing import List
 
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
-        result = max(map(lambda *x: sum(x), *accounts))
-        return result
+        result = (sum(i) for i in zip(*accounts))
+        return max(result)
+    
+example = Solution()
+print(example.maximumWealth(accounts=[[1,2,3],[3,2,1]]))
