@@ -59,3 +59,6 @@ class Solution:
         for i in range(len(seats)):
             res += abs(seats[i] - students[i])
         return res
+    
+example = Solution()
+print(example.minMovesToSeat(seats=[3,1,5], students=[2,7,4]))
