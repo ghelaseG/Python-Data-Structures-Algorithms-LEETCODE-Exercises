@@ -9,5 +9,14 @@ from typing import List
 
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        result = []
         candies.sort()
-        return [x in extraCandies + x for x in candies]
+        last = candies[-1]
+        for i in range(len(candies)):
+            if candies[i] + extraCandies >= last:
+                result.append(True)
+            else:
+                result.append(False)
+
+example = Solution()
+print(example.kidsWithCandies(candies=[2,3,5,1,3], extraCandies=3))
