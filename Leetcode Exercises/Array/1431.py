@@ -5,6 +5,8 @@ Return a boolean array result of length n, where result[i] is true if, after giv
 
 Note that multiple kids can have the greatest number of candies.
 """
+
+#because we need to have the same result, this block of code is not correct as it does not match the output, anything else is good.
 from typing import List
 
 class Solution:
