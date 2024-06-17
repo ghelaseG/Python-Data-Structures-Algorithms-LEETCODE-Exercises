@@ -12,13 +12,10 @@ from typing import List
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         result = []
-        candies.sort()
-        last = candies[-1]
+        biggest_value = max(candies)
         for i in range(len(candies)):
-            if candies[i] + extraCandies >= last:
-                result.append(True)
-            else:
-                result.append(False)
+            result.append(candies[i] + extraCandies >= biggest_value)
+                
         return result
 
 example = Solution()
