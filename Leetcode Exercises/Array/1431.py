@@ -17,6 +17,7 @@ class Solution:
                 result.append(True)
             else:
                 result.append(False)
+        return result
 
 example = Solution()
 print(example.kidsWithCandies(candies=[2,3,5,1,3], extraCandies=3))
