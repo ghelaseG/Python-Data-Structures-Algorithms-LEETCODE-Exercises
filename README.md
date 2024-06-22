@@ -17,6 +17,8 @@ Favourite Resources:
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
 - Maths : [Sahil & Sarra](https://www.youtube.com/watch?v=iF0I2SPk5JU&ab_channel=Sahil%26Sarra)
  
+Maths Practice:
+- Statistics and probability : [Khan Academy](https://www.khanacademy.org/math/statistics-probability)
 
 Patterns and Constraints:
 
