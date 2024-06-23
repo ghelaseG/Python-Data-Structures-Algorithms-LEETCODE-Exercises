@@ -8,4 +8,10 @@ from typing import List
 
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        
+        result = []
+        for i in range(len(nums)):
+            count = 0
+            for j in range(i+1):
+                count += nums[j]
+            result.append(count)
+        return result
