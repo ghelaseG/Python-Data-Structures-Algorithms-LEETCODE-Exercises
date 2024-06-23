@@ -8,13 +8,11 @@ from typing import List
 
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        result = []
-        for i in range(len(nums)):
-            count = 0
-            for j in range(i+1):
-                count += nums[j]
-            result.append(count)
-        return result
+        for i in range(1, len(nums)):
+            nums[i] =nums[i-1] + nums[i]
+        return nums
     
 example = Solution()
 print(example.runningSum(nums=[1,2,3,4]))
+
+#time complexity: O(N), space: O(1)
