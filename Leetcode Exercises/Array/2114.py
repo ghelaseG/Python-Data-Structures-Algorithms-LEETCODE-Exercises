@@ -9,9 +9,11 @@ from typing import List
 
 class Solution:
     def mostWordsFound(self, sentences: List[str]) -> int:
+        result = []
         for i in sentences:
-            print(i.count(" "))
-            
+            result.append(i.count(" "))
+        return max(result) + 1
+        
 
 example = Solution()
 print(example.mostWordsFound(sentences=["alice and bob love leetcode","i think so too","this is great thanks very much"]))
