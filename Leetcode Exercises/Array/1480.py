@@ -15,3 +15,6 @@ class Solution:
                 count += nums[j]
             result.append(count)
         return result
+    
+example = Solution()
+print(example.runningSum(nums=[1,2,3,4]))

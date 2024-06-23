@@ -19,6 +19,7 @@ Favourite Resources:
  
 Maths Practice:
 - Statistics and probability : [Khan Academy](https://www.khanacademy.org/math/statistics-probability)
+- Essence of linear algebra : [3Blue1Brown](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&ab_channel=3Blue1Brown)
 
 Patterns and Constraints:
 
