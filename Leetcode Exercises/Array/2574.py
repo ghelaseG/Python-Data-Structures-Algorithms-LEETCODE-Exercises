@@ -13,4 +13,14 @@ Return the array answer.
 from typing import List
 class Solution:
     def leftRightDifference(self, nums: List[int]) -> List[int]:
-        
+        rightSum = sum(nums)
+        leftSum = 0
+        answer = []
+        for i in range(len(nums)):
+            answer.append(abs(rightSum-leftSum-nums[i]))
+            rightSum -= nums[i]
+            leftSum += nums[i]
+        return answer
+
+example = Solution()
+print(example.leftRightDifference(nums=[10,4,8,3]))
