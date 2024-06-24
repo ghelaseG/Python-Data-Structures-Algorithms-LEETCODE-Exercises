@@ -51,3 +51,6 @@ Interview Prep:
 
 - Website : [Pramp](https://www.pramp.com/dashboard#/)
 - Book : [Cracking the coding interview](https://github.com/careercup/CtCI-6th-Edition-Python)
+
+Explanation:
+- XOR : [YouTube](https://www.youtube.com/watch?v=jblMN1BdWqE&ab_channel=sudhanshukumar)
