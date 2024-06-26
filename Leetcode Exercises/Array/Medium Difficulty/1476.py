@@ -15,7 +15,17 @@ from typing import List
 class SubrectangleQueries:
     
     def __init__(self, rectangle: List[List[int]]):
+        #let's copy and initialise the List of lists(matrix)
+        self.matrix = rectangle
 
     def updateSubrectangle(self, row1: int, col1: int, row2: int, col2: int, newValue: int) -> None:
+        #now we can iterate throughout the rows and cols that are given using nested for loops
+        ##make sure we use +1 as we want to include the number row or col
+        ###for each row or col, we add the new value given
+        for row in range(row1, row2 + 1):
+            for col in range(col1, col2 + 1):
+                self.matrix[row][col] = newValue
 
     def getValue(self, row: int, col: int) -> int:
+        #now to return our new matrix
+        return self.matrix
