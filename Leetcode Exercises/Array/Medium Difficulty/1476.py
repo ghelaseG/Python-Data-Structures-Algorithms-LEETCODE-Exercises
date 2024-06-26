@@ -29,3 +29,14 @@ class SubrectangleQueries:
     def getValue(self, row: int, col: int) -> int:
         #now to return our new matrix
         return self.matrix[row][col]
+    
+    def printMatrix(self) -> int:
+        for row in self.matrix:
+            print(row)
+
+example = SubrectangleQueries(rectangle=[[1,2,1],[4,3,4],[3,2,1],[1,1,1]])
+
+example.getValue(0, 2)
+example.updateSubrectangle(0, 0, 3, 2, 5)
+
+example.printMatrix()
