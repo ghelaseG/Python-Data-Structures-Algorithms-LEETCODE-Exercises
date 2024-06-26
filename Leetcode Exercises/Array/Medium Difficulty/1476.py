@@ -28,4 +28,4 @@ class SubrectangleQueries:
 
     def getValue(self, row: int, col: int) -> int:
         #now to return our new matrix
-        return self.matrix
+        return self.matrix[row][col]
