@@ -23,6 +23,7 @@ Maths Practice:
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
 
 Coding Challenges:
+
 - Interactive Coding Challenges : [GitHub](https://github.com/donnemartin/interactive-coding-challenges?tab=readme-ov-file#arrays-and-strings)
 
 Patterns and Constraints:
@@ -33,6 +34,7 @@ Patterns and Constraints:
 
 
 System Design:
+
 - GitHub : [Donne Martin](https://github.com/donnemartin/system-design-primer)
 - YouTube : [ByteByteGo](https://www.youtube.com/watch?v=lX4CrbXMsNQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&ab_channel=ByteByteGo)
 
@@ -53,4 +55,5 @@ Interview Prep:
 - Book : [Cracking the coding interview](https://github.com/careercup/CtCI-6th-Edition-Python)
 
 Explanation:
+
 - XOR : [YouTube](https://www.youtube.com/watch?v=jblMN1BdWqE&ab_channel=sudhanshukumar)
