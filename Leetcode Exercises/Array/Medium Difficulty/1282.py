@@ -12,4 +12,7 @@ from typing import List
 
 class Solution:
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
-        
+        result = []
+        group = []
+        for i in range(len(groupSizes)):
+            if groupSizes[i] 
