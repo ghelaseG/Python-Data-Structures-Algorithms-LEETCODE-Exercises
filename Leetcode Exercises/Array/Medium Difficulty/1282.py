@@ -16,6 +16,13 @@ class Solution:
         result = []
         group = {}
         for i, j in enumerate(groupSizes):
-            group[j].append(i) 
-        
+            if j not in group:
+                group[j] = []
+            group[j].append(i)
+
+            if len(group[j]) == j:
+                result.append(group[j])
+                group[j] = []
+
+        return result 
         
