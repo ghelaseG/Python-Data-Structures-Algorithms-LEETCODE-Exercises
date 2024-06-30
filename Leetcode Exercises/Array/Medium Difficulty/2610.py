@@ -31,3 +31,4 @@ class Solution:
 example = Solution()
 print(example.findMatrix(nums=[1,3,4,1,2,3,1]))
 
+#Time and space complexity: O(N)
