@@ -12,4 +12,8 @@ from typing import List
 
 class Solution:
     def decode(self, encoded: List[int], first: int) -> List[int]:
-        
+        result = [first] #we add in our array the number given
+
+        for i in encoded:
+            result.append(result[-1]^i)
+        return result
