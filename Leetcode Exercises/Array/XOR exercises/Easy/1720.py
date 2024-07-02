@@ -7,6 +7,7 @@ You are given the encoded array. You are also given an integer first, that is th
 
 Return the original array arr. It can be proved that the answer exists and is unique.
 """
+#good explanation of the exercise: https://youtu.be/FZBkXnDxCLg?si=h0NpRsDxOktJi4Tn
 
 from typing import List
 
@@ -16,5 +17,5 @@ class Solution:
 
         for i in encoded:
             result.append(result[-1]^i)
-            
+
         return result
