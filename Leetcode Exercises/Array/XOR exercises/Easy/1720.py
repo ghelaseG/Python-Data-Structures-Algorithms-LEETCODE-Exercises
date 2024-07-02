@@ -16,4 +16,5 @@ class Solution:
 
         for i in encoded:
             result.append(result[-1]^i)
+            
         return result
