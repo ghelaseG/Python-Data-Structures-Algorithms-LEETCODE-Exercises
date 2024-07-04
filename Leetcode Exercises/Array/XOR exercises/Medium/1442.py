@@ -20,16 +20,12 @@ class Solution:
         count = 0
 
         for i in range(N - 1):
-            a = 0
-            for j in range(i+1, N):
-                a = a ^ arr[j - 1]
-                b = 0
-                for k in range(j, N):
-                    b = b ^ arr[k]
-
-                    if a == b:
-                        count += 1
+            currXOR = arr[i]
+            for k in range(i + 1, N):
+                currXOR = currXOR ^ arr[k]
+                if currXOR == 0:
+                    count += (k - i)
         
         return count
 
-#Time complexity: O(N^3)
+#Time complexity: O(N^2)
