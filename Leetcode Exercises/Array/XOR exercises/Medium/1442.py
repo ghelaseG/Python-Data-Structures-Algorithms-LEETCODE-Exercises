@@ -19,13 +19,20 @@ class Solution:
         N = len(arr)
         count = 0
 
-        for i in range(N - 1):
-            currXOR = arr[i]
-            for k in range(i + 1, N):
-                currXOR = currXOR ^ arr[k]
-                if currXOR == 0:
-                    count += (k - i)
+        prefix = 0
+        prev_xor_cnt = defaultdict(int)
+        prev_xor_cnt[0] = 1
+        prev_xor_index_sum = defaultdict(int)
+
+        for i in range(N):
+            prefix ^= arr[i]
+
+            if prev_xor_cnt[prefix]:
+                count += i * prev_xor_cnt[prefix] - prev_xor_index_sum[prefix]
+
+            prev_xor_cnt[prefix] += 1
+            prev_xor_index_sum[prefix] += i + 1
         
         return count
 
-#Time complexity: O(N^2)
+#Time complexity: O(N)
