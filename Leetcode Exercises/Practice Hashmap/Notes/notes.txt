@@ -1,0 +1,5 @@
+- Great resources:
+1. About defaultdict: https://docs.python.org/3/library/collections.html#collections.defaultdict
+2. Why Hashmap: https://www.youtube.com/watch?v=EK0PyKMnJV4&ab_channel=Techdose
+3. Exercises: https://www.w3resource.com/python-exercises/dictionary/
+4. Quiz: https://pynative.com/python-dictionary-quiz/
