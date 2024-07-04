@@ -13,6 +13,7 @@ Return the number of triplets (i, j and k) Where a == b.
 """
 
 from typing import List
+from collections import defaultdict
 
 class Solution:
     def countTriplets(slef, arr: List[int]) -> int:
@@ -34,5 +35,8 @@ class Solution:
             prev_xor_index_sum[prefix] += i + 1
         
         return count
+    
+example = Solution()
+print(example.countTriplets(arr=[1,1,1,1,1]))
 
 #Time complexity: O(N)
