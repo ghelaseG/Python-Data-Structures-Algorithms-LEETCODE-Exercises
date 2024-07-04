@@ -13,4 +13,14 @@ from typing import List
 
 class Solution:
     def maximumStrongPairXor(self, nums: List[int]) -> int:
+        maxXOR = 0
+
+        for i in nums:
+            for j in nums:
+                if abs(i - j) <= min(i, j):
+                    maxXOR = max(maxXOR, i ^ j)
         
+        return maxXOR
+
+example = Solution()
+print(example.maximumStrongPairXor(nums=[5,6,25,30]))
