@@ -3,4 +3,4 @@
 2. Why Hashmap: https://www.youtube.com/watch?v=EK0PyKMnJV4&ab_channel=Techdose
 3. Exercises: https://www.w3resource.com/python-exercises/dictionary/
 4. Quiz: https://pynative.com/python-dictionary-quiz/
-5. Practice maths/computer programming: https://projecteuler.net/
+5. Practice maths/computer programming: https://projecteuler.net/ and https://www.nayuki.io/page/project-euler-solutions
