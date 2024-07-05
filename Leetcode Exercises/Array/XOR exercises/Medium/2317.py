@@ -9,4 +9,7 @@ from typing import List
 
 class Solution:
     def maximumXOR(self, nums: List[int]) -> int:
-        
+        count = 0
+        for i in nums:
+            count |= i
+        return count
