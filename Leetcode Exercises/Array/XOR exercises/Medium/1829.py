@@ -10,4 +10,14 @@ from typing import List
 
 class Solution:
     def getMaximumXor(self, nums: List[int], maximumBit: int) -> List[int]:
-        
+        prefix = []
+
+        mask = (1 << maximumBit) - 1
+        for x in nums:
+            prefix.append(mask ^ x)
+            mask ^= x
+        prefix.reverse()
+        return prefix
+    
+example = Solution()
+print(example.getMaximumXor(nums = [0,1,1,3], maximumBit = 2))
