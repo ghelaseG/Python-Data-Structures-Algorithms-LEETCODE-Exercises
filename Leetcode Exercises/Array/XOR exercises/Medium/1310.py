@@ -10,4 +10,16 @@ from typing import List
 
 class Solution:
     def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
-        
+        #compute prefix xoRs
+        n = len(arr)
+        prefix = [0 for _ in range(n+1)]
+
+        for i in range(n):
+            prefix[i+1] = prefix[i] ^ arr[i]
+
+        #compute queries XoR
+        result = []
+        for L, R in queries:
+            result.append(prefix[R+1] ^ prefix[L])
+
+        return result
