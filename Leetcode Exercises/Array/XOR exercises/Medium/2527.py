@@ -12,6 +12,7 @@ Note that:
 val1 | val2 is bitwise OR of val1 and val2.
 val1 & val2 is bitwise AND of val1 and val2.
 """
+from typing import List
 
 class Solution:
     def xorBeauty(self, nums: List[int]) -> int:
