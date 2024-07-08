@@ -25,3 +25,8 @@ class Solution:
             result.append(prefix[R+1] ^ prefix[L])
 
         return result
+
+example = Solution()
+
+print(example.xorQueries(arr = [1,3,4,8], queries = [[0,1],[1,2],[0,3],[3,3]]))
+
