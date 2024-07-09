@@ -19,7 +19,7 @@ class Solution:
         ans = 0
         N = len(nums)
 
-        for i in range(32):
+        for i in range(4):
             count = 0
             t = 0
             for x in nums:
