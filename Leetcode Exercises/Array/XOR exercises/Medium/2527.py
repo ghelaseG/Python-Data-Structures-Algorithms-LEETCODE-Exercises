@@ -28,3 +28,6 @@ class Solution:
             t += (count * ((N * N) - (N - count) * (N - count))) % 2
             ans += (1 << i) * (t % 2 == 1)
         return ans
+
+example = Solution()
+print(example.xorBeauty(nums=[1,4]))
