@@ -16,4 +16,15 @@ from typing import List
 
 class Solution:
     def xorBeauty(self, nums: List[int]) -> int:
-        return reduce(xor, nums)
+        ans = 0
+        N = len(nums)
+
+        for i in range(32):
+            count = 0
+            t = 0
+            for x in nums:
+                if ((x & (1 << i)) > 0):
+                    count += 1
+            t += (count * ((N * N) - (N - count) * (N - count))) % 2
+            ans += (1 << i) * (t % 2 == 1)
+        return ans
