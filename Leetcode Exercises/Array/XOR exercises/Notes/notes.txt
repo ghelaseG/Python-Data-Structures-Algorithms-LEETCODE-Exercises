@@ -36,3 +36,12 @@ we have the number -2,147,483,552. Shifting this to the right 4 positions with t
 or the number -134,217,722.
 
 So we see that we have preserved the sign of our negative numbers by using the arithmetic right shift, rather than the logical right shift. And once again, we see that we are performing division by powers of 2.
+
+4. AND operator ( & )
+https://medium.com/biffures/part-2-the-beauty-of-bitwise-and-or-cdf1d8d87891#.qwpq69ewr
+
+5. OR operator ( | )
+https://medium.com/biffures/part-3-or-and-20ccc9938f05#.14o470vqk
+
+6. Bitwise Patterns
+https://medium.com/biffures/part-4-bitwise-patterns-7b17dae3eee0
