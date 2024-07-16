@@ -18,4 +18,8 @@ class my_dict_object(object):
 #create an instance test of the dictObj class
 test = my_dict_object()
 
-print(test.__dict__)
+print(test.__hash__)
+
+print(vars(test))
+
+print(dir(test))
