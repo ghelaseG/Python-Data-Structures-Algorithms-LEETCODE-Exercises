@@ -6,3 +6,50 @@ Given a number N having only one ‘1’ and all other ’0’s in its binary re
 """
 
 
+#we can use this function to check if the binary position is at the power of 2
+#meaning that, if it is at the power of 2, then it's only 1 bit
+
+def isPowerofTwo(n):
+
+    return (n and (not (n & (n - 1))))
+
+def findPosition(n):
+    if not isPowerofTwo(n):
+        return -1
+    
+    count = 0
+
+    #we gonna use a while loop to iterate one by one till the end
+
+    while (n):
+
+        n = n >> 1
+
+        count += 1
+
+    return count
+
+if __name__ == "__main__":
+    n = 0
+    position = findPosition(n)
+
+    if position == -1:
+        print("n =", n, "Invalid Number")
+    else:
+        print("n = ", n, "Position", position)
+
+    n = 12
+    position = findPosition(n)
+
+    if position == -1:
+        print("n =", n, "Invalid Number")
+    else:
+        print("n = ", n, "Position", position)
+
+    n = 128
+    position = findPosition(n)
+
+    if position == -1:
+        print("n =", n, "Invalid Number")
+    else:
+        print("n = ", n, "Position", position)
