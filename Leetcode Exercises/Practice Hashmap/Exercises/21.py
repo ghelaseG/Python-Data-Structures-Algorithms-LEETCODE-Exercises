@@ -8,7 +8,11 @@ bc
 bd
 """
 
-import itertools
-
 d = {'1': ['a', 'b'], '2': ['c', 'd']}
 
+result = [[]]
+
+for key, value in d.items():
+    result = [x + [y] for x in result for y in value]
+
+print(result)
