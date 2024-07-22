@@ -45,3 +45,6 @@ https://medium.com/biffures/part-3-or-and-20ccc9938f05#.14o470vqk
 
 6. Bitwise Patterns
 https://medium.com/biffures/part-4-bitwise-patterns-7b17dae3eee0
+
+7. Real world use cases of bitwise operators
+https://stackoverflow.com/questions/2096916/real-world-use-cases-of-bitwise-operators
