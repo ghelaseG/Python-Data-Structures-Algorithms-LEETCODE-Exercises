@@ -47,8 +47,17 @@ Given two integers, find XOR of them without using the XOR operator, i.e., witho
 
 #3rd Approach
 
+# def myXOR(x, y):
+#     return (x & (~y)) | ((~x) & y)
+
+# x = 3
+# y = 5
+# print('XOR is:', myXOR(x, y))
+
+#4th Approach
+
 def myXOR(x, y):
-    return (x & (~y)) | ((~x) & y)
+    return (x + y - (2 * (x & y)))
 
 x = 3
 y = 5
