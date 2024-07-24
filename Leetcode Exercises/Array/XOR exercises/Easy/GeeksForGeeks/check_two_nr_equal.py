@@ -13,13 +13,23 @@ Given two numbers, the task is to check if two numbers are equal without using A
 
 # checkEqual(2, 2)
 
-def is_equal(num1, num2):
-    mask = 1
-    for i in range(32):
-        if (num1 & mask) != (num2 & mask):
-            return False
-        mask <<= 1
-    return True
+# def is_equal(num1, num2):
+#     mask = 1
+#     for i in range(32):
+#         if (num1 & mask) != (num2 & mask):
+#             return False
+#         mask <<= 1
+#     return True
 
-print(is_equal(10, 10))
-print(is_equal(20, 10))
+# print(is_equal(10, 10))
+# print(is_equal(20, 10))
+
+def similarity_nr(a, b):
+    x = (a & ~b)
+    y = (~a & b)
+    if ( x == 0 and y == 0):
+        print("Same")
+    else:
+        print("Not the same")
+
+print(similarity_nr(10, 10))
