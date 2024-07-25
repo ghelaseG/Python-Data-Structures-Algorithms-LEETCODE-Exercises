@@ -3,3 +3,13 @@ Given two signed integers, write a function that returns true if the signs of gi
 Let the given integers be x and y. The sign bit is 1 in negative numbers, and 0 in positive numbers. The XOR of x and y will have the sign bit as 1 if they have opposite sign. In other words, XOR of x and y will be negative number if x and y have opposite signs. The following code use this logic. 
 """
 
+def oppositeSign(x, y):
+    return ((x ^ y) < 0)
+
+x = 100
+y = 1
+
+if (oppositeSign == True):
+    print("Signs are opposite")
+else:
+    print("Signs are not opposite")
