@@ -9,7 +9,7 @@ def oppositeSign(x, y):
 x = 100
 y = 1
 
-if (oppositeSign == True):
+if (oppositeSign(x, y) == True):
     print("Signs are opposite")
 else:
     print("Signs are not opposite")
