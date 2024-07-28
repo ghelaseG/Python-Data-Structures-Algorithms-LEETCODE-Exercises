@@ -10,18 +10,20 @@ Favourite Resources:
 - Leetcode Cheatsheet : [Pirate King](https://www.piratekingdom.com/leetcode/cheat-sheet)
 - FlowChart : [Algo Monster](https://algo.monster/flowchart)
 - Roadmap : [Neetcode](https://neetcode.io/roadmap)
+- Roadmap 2: [Greg Hogg](https://www.youtube.com/watch?v=w6eZhvzw5VE&list=LL&index=10&ab_channel=GregHogg)[Greg Hogg](https://www.youtube.com/watch?v=5rZk99AGVNc&list=LL&index=6&ab_channel=GregHogg)
 - Course : [Udemy](https://www.udemy.com/course/data-structures-algorithms-python/?couponCode=ST13MT40224)
 - Github resources: [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
 - YouTube shorts : [Greg Hogg](https://youtube.com/@GregHogg?si=-yiRrGiBHYJrenKK)
 - YouTube : [Abdul Bari](https://www.youtube.com/@abdul_bari)
 - YouTube : [Freecodecamp(Joy-Brock)](https://www.youtube.com/watch?v=fW_OS3LGB9Q&t=8s&ab_channel=freeCodeCamp.org)
-- Maths : [Sahil & Sarra](https://www.youtube.com/watch?v=iF0I2SPk5JU&ab_channel=Sahil%26Sarra)
+
  
 Maths Practice:
 - Courses on Udemy to master Math by Coding: [Mike X Cohen](https://www.udemy.com/course/math-with-python/?couponCode=ST9MT71624#reviews), [Krista King](https://www.udemy.com/course/integralcalc-algebra/?couponCode=ST9MT71624)
 - Statistics and probability : [Khan Academy](https://www.khanacademy.org/math/statistics-probability)
 - Essence of linear algebra : [3Blue1Brown](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&ab_channel=3Blue1Brown)
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
+- Maths : [Sahil & Sarra](https://www.youtube.com/watch?v=iF0I2SPk5JU&ab_channel=Sahil%26Sarra)
 
 Coding Challenges:
 
