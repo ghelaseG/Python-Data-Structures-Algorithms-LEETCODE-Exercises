@@ -5,3 +5,22 @@ Method 1 (Repeated Subtraction)
 Take a counter variable c and initialize it with 0. In a loop, repeatedly subtract x, y and z by 1 and increment c. The number which becomes 0 first is the smallest. After the loop terminates, c will hold the minimum of 3. 
 """
 
+# Method 1
+## Take a counter variable c and initialize it with 0. In a loop, repeatedly subtract x, y and z by 1 and increment c. The number which becomes 0 first is the smallest. After the loop terminates, c will hold the minimum of 3. 
+
+def minimumInteger(x, y, z):
+    count = 0
+
+    while (x and y and z):
+        x = x - 1
+        y = y - 1
+        z = z - 1
+        count += 1
+
+    return count
+
+#Example
+x = 20
+y = 15
+z = 5
+print('Minimum of 3 numbers is: ', minimumInteger(x, y, z))
