@@ -51,3 +51,6 @@ https://stackoverflow.com/questions/2096916/real-world-use-cases-of-bitwise-oper
 
 8. 10 Bitwise Tricks and Tips
 https://www.youtube.com/watch?v=LGrE0siZ-ZA&ab_channel=TLEEliminators-byPriyansh
+
+9. Bit hacks
+https://www.youtube.com/watch?v=ZusiKXcz_ac&ab_channel=MITOpenCourseWare
