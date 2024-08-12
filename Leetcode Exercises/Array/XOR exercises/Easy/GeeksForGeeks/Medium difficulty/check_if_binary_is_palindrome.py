@@ -41,22 +41,39 @@ The idea is similar to checking a string is palindrome or not. We start from lef
 #     print(int(isPalindrome(x)))
 
 
-# method 2: using reverse
+# # method 2: using reverse
 
-def bin(n):
-    ans = ""
-    while n > 0:
-        ans = (str(n & 1)) + ans
-        n >>= 1
-    return ans
+# def bin(n):
+#     ans = ""
+#     while n > 0:
+#         ans = (str(n & 1)) + ans
+#         n >>= 1
+#     return ans
 
-def checkPalindrome(x):
-    s1 = bin(x)
-    s2 = s1[::-1]
-    return 1 if s1 == s2 else 0
+# def checkPalindrome(x):
+#     s1 = bin(x)
+#     s2 = s1[::-1]
+#     return 1 if s1 == s2 else 0
 
-x = 9
-print(checkPalindrome(x))
+# x = 9
+# print(checkPalindrome(x))
 
-x = 10
-print(checkPalindrome(x))
+# x = 10
+# print(checkPalindrome(x))
+
+
+# method 3: using | operator
+
+def is_binary_palindrome(num):
+    rev_binary = 0
+    copy_num = num
+    while copy_num:
+        rev_binary = (rev_binary << 1) | (copy_num & 1)
+        copy_num >>= 1
+    return rev_binary == num
+
+num = 9
+print(is_binary_palindrome(num))
+
+num = 10
+print(is_binary_palindrome(num))
