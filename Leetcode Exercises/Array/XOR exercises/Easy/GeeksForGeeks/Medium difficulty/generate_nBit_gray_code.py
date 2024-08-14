@@ -21,6 +21,6 @@ def GreyCode(n):
         s = bin(value)[2::]
         print(s.zfill(n), end = " ")
 
-n = 4
+n = 3
 
-GreyCode(4)
+GreyCode(n)
