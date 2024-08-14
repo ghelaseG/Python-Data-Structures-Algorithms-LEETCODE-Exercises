@@ -16,24 +16,47 @@ Third and fourth bits (from end) are set.
 """
 # method 1
 
-def isSparse(n):
-    if (n == 1):
-        return True
-    global prev
-    while (n > 0):
-        prev = n & 1
-        n = n >> 1
-        curr =  n & 1
-        if (prev == curr and prev == 1):
-            return False
-        prev = curr
+# def isSparse(n):
+#     if (n == 1):
+#         return True
+#     global prev
+#     while (n > 0):
+#         prev = n & 1
+#         n = n >> 1
+#         curr =  n & 1
+#         if (prev == curr and prev == 1):
+#             return False
+#         prev = curr
     
-    return True
+#     return True
 
-# Example
-n = 72
-if (isSparse(n)):
-    print("Sparse")
+# # Example
+# n = 72
+# if (isSparse(n)):
+#     print("Sparse")
 
-else:
-    print("Not Sparse")
+# else:
+#     print("Not Sparse")
+
+
+# method 2
+
+"""
+If we observe carefully, then we can notice that if we can use bitwise AND of the binary representation of the “given number, then it’s “right-shifted number”(i.e., half the given number) to figure out whether the number is sparse or not. The result of AND operator would be 0 if the number is sparse and non-zero if not sparse.
+"""
+
+def checkSparse(n):
+
+    # n is not sparse if there is set in AND of n and n/2 (n >> 1)
+
+    if (n & (n >> 1)):
+        return 0
+    
+    return 1
+
+if __name__ == "__main__":
+
+    print(checkSparse(72))
+    print(checkSparse(12))
+    print(checkSparse(2))
+    print(checkSparse(30))
