@@ -14,6 +14,7 @@ Output: false
 Explanation:  Binary representation of 12 is 1100. 
 Third and fourth bits (from end) are set.
 """
+# method 1
 
 def isSparse(n):
     if (n == 1):
