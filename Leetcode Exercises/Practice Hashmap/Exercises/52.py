@@ -26,3 +26,7 @@ print(extract_value(marks, subject))
 subject2 = 'Math'
 
 print(extract_value(marks, subject2))
+
+subject3 = 'Biology'
+
+print(extract_value(marks, subject3))
