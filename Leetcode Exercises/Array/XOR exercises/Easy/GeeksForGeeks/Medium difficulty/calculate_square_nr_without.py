@@ -1,6 +1,7 @@
 """
 Given an integer n, calculate the square of a number without using *, / and pow(). 
 """
+# method 1
 
 def square(num):
 
