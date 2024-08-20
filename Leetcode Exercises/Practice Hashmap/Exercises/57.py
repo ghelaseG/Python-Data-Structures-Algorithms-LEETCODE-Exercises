@@ -16,4 +16,5 @@ def test(dict):
     result = {key: [idx for idx in val if not idx % 2] for key, val in dict.items()}
     return result
 
+print("Check even numbers: ")
 print(test(students))
