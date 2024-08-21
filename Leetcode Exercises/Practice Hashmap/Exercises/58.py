@@ -13,10 +13,10 @@ Combinations of key-value pairs of the said dictionary:
 # use itertools module for his combination function
 import itertools
 
-def test(dict):
+def test(dictt):
     #generate all combination of key value pairs in the dictionary
     #convert each combination into a dictionary and return a list of dictionaries
-    result = list(map(dict, itertools.combinations(dict.items(), 2)))
+    result = list(map(dict, itertools.combinations(dictt.items(), 2)))
     return result
 
 students = {'V': [1, 4, 6, 10], 'VI': [1, 4, 12], 'VII': [1, 3, 8]}
