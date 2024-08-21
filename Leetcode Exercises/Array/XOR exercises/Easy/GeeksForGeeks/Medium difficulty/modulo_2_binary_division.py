@@ -22,75 +22,113 @@ When there are no bits left to pull down, we have a result. The (n-1)-bit remain
 
 #for more info use this link: https://www.geeksforgeeks.org/modulo-2-binary-division/
 
-# method 1
+# # method 1
 
-#return xor of a and b
-def xor(a, b):
+# #return xor of a and b
+# def xor(a, b):
 
-    #initialise result
-    result = []
+#     #initialise result
+#     result = []
 
-    #traverse all bits, if bits are same, then XOR is zero, else 1
-    for i in range(1, len(b)):
-        if a[i] == b[i]:
-            result.append('0')
-        else:
-            result.append('1')
+#     #traverse all bits, if bits are same, then XOR is zero, else 1
+#     for i in range(1, len(b)):
+#         if a[i] == b[i]:
+#             result.append('0')
+#         else:
+#             result.append('1')
 
-    return ''.join(result)
+#     return ''.join(result)
 
-#perform modulo 2 division
-def mod2div(dividend, divisor):
+# #perform modulo 2 division
+# def mod2div(dividend, divisor):
 
-    #number of bits to be XORed at a time
-    pick = len(divisor)
+#     #number of bits to be XORed at a time
+#     pick = len(divisor)
 
-    #slicing the dividend to appropriate length for particular step
-    tmp = dividend[0: pick]
+#     #slicing the dividend to appropriate length for particular step
+#     tmp = dividend[0: pick]
 
-    while pick < len(dividend):
+#     while pick < len(dividend):
 
-        if tmp[0] == '1':
-            #replace the dividend by the result of XOR and pull 1 bit down
-            tmp = xor(divisor, tmp) + dividend[pick]
+#         if tmp[0] == '1':
+#             #replace the dividend by the result of XOR and pull 1 bit down
+#             tmp = xor(divisor, tmp) + dividend[pick]
 
-        else:
-            #if the leftmost bit of the dividend (or the part used in each step) is 0, 
-            #the step cannot use the regular divisor; we need to use an all -0s divisor
-            tmp = xor('0'*pick, tmp) + dividend[pick]
+#         else:
+#             #if the leftmost bit of the dividend (or the part used in each step) is 0, 
+#             #the step cannot use the regular divisor; we need to use an all -0s divisor
+#             tmp = xor('0'*pick, tmp) + dividend[pick]
 
-        #increment pick to move further
-        pick += 1
+#         #increment pick to move further
+#         pick += 1
 
-    #for the last n bits, we have to carry it out normally as increased value of pick will 
-    #cause Index Out of Bounds
+#     #for the last n bits, we have to carry it out normally as increased value of pick will 
+#     #cause Index Out of Bounds
         
-    if tmp[0] == '1':
-        tmp = xor(divisor, tmp)
-    else:
-        tmp = xor('0'*pick, tmp)
+#     if tmp[0] == '1':
+#         tmp = xor(divisor, tmp)
+#     else:
+#         tmp = xor('0'*pick, tmp)
 
-    checkword = tmp
-    return checkword
+#     checkword = tmp
+#     return checkword
 
-#function used at the sender side to encode data by appending remainder of modular
-#division at the end of data
+# #function used at the sender side to encode data by appending remainder of modular
+# #division at the end of data
 
-def encodeData(data, key):
+# def encodeData(data, key):
 
-    l_key = len(key)
+#     l_key = len(key)
 
-    #appends n-1 zeros at the end of data
-    append_data = data + "0"*(l_key-1)
-    remainder = mod2div(append_data, key)
+#     #appends n-1 zeros at the end of data
+#     append_data = data + "0"*(l_key-1)
+#     remainder = mod2div(append_data, key)
 
-    #append remainder in the original data
-    codeword = data + remainder
-    print("Remainder:", remainder)
-    print("Encoded Data (Data + Remainder): ", codeword)
+#     #append remainder in the original data
+#     codeword = data + remainder
+#     print("Remainder:", remainder)
+#     print("Encoded Data (Data + Remainder): ", codeword)
 
-#Driver code
-data = "100100"
-key = "1101"
+# #Driver code
+# data = "100100"
+# key = "1101"
 
-encodeData(data, key)
+# encodeData(data, key)
+
+# method 2
+
+from math import log, ceil
+
+def CRC(dataword, generator):
+    dword = int(dataword, 2)
+    l_gen = len(generator)
+
+    #append 0s to dividend
+    dividend = dword << (l_gen - 1)
+
+    #shft speciefies the number of least significant bits not being XORed
+    shft = ceil(log(dividend + 1, 2)) - l_gen
+
+    #shft calculus is the number of binary digits in dividend
+    generator = int(generator, 2)
+
+    while dividend >= generator or shft >= 0:
+        
+        #bitwise XOR the MSBs of dividend with generator replace the operated
+        #MSBs from the dividend with remainder generated
+
+        rem = (dividend >> shft) ^ generator
+        dividend = (dividend & ((1 << shft) - 1)) | (rem << shft)
+
+        #change shft variable
+        shft = ceil(log(dividend + 1, 2)) - l_gen
+
+    #finally, AND the initial dividend with the remainder (=dividend)
+    codeword = dword << (l_gen - 1) | dividend
+    print("Remainder:", bin(dividend).lstrip("-0b"))
+    print("Codeword :", bin(codeword).lstrip("-0b"))
+
+#Example
+dataword = "10011101"
+generator = "1001"
+CRC(dataword, generator)
