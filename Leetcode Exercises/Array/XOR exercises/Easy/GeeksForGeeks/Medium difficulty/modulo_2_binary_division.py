@@ -22,6 +22,7 @@ When there are no bits left to pull down, we have a result. The (n-1)-bit remain
 
 #for more info use this link: https://www.geeksforgeeks.org/modulo-2-binary-division/
 
+# method 1
 
 #return xor of a and b
 def xor(a, b):
