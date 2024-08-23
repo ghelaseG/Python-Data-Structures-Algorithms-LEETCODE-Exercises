@@ -15,6 +15,8 @@ Output : x = 11
 
 """
 
+#method 1
+
 #copy set bits in range [l, r] from y to x
 #note that x is passed by reference and modified by this function
 
