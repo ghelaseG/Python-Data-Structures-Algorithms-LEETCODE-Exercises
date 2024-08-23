@@ -15,4 +15,31 @@ Output : x = 11
 
 """
 
+#copy set bits in range [l, r] from y to x
+#note that x is passed by reference and modified by this function
 
+def copySetBits(x, y, l, r):
+    #l and r must be between 1 to 32
+    #(assuming ints are stored using 32 bits)
+    if (l < 1 or r > 32):
+        return x
+    
+    #traverse in given range
+    for i in range(l, r + 1):
+
+        #find a mask(a number whose only set bit is at i'th position)
+        mask = 1 << (i - 1)
+
+        #if i'th bit is set in y, set i'th bit in x also
+        if ((y & mask) != 0):
+            x = x | mask
+    return x
+    
+# example
+if __name__ == '__main__':
+    x = 10
+    y = 13
+    l = 1
+    r = 32
+    x = copySetBits(x, y, l, r)
+    print('Modified x is ', x)
