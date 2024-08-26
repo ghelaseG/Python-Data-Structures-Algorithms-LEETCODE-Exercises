@@ -15,4 +15,38 @@ as sum of a number x and countSetBits(x)
 for any number x.
 """
 
+# function to get the nr of set bits in binary representation of passed binary nr
 
+def countSetBits(x):
+
+    count = 0
+
+    while (x):
+        x = x & (x - 1)
+        count += 1
+
+    return count
+
+# return True if n is Bleak
+
+def isBleak(n):
+
+    #check for all numbers 'x' smaller than n
+    #if x + countSetBits(x) become n, then n can't be Bleak
+
+    for x in range(1, n):
+
+        if (x + countSetBits(x) == n):
+            return False
+    
+    return True
+
+if (isBleak(3)):
+    print('Yes')
+else:
+    print('No')
+
+if (isBleak(4)):
+    print('Yes')
+else:
+    print("No")
