@@ -14,6 +14,7 @@ Output : true
 as sum of a number x and countSetBits(x)
 for any number x.
 """
+# method 1
 
 # function to get the nr of set bits in binary representation of passed binary nr
 
