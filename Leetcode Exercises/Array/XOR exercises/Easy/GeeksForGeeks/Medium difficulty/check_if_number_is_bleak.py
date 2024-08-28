@@ -54,56 +54,72 @@ for any number x.
 
 
 
-# method 2 (efficient way)
+# # method 2 (efficient way)
 
-import math
+# import math
 
-def countSetBits(x):
+# def countSetBits(x):
 
-    count = 0
+#     count = 0
 
-    while x:
-        x = x & (x - 1) 
-        count = count + 1
+#     while x:
+#         x = x & (x - 1) 
+#         count = count + 1
 
-    return count
+#     return count
 
-# a function to return ceiling of log x in base 2
-#for exp, it returns 3 for 8 and 4 for 9
+# # a function to return ceiling of log x in base 2
+# #for exp, it returns 3 for 8 and 4 for 9
 
-def ceilLog2(x):
+# def ceilLog2(x):
 
-    count = 0
-    x = x - 1
+#     count = 0
+#     x = x - 1
 
-    while (x > 0):
-        x = x >> 1
-        count += 1
+#     while (x > 0):
+#         x = x >> 1
+#         count += 1
 
-    return count
+#     return count
 
-# return True if n is Bleak
+# # return True if n is Bleak
 
-def isBleak(n):
+# def isBleak(n):
 
-    #check for all numbers 'x' smaller than n
-    #if x + countSetBits(x) becomes n, then n can't be Bleak
+#     #check for all numbers 'x' smaller than n
+#     #if x + countSetBits(x) becomes n, then n can't be Bleak
 
-    for x in range((n - ceilLog2(n)), n):
+#     for x in range((n - ceilLog2(n)), n):
 
-        if (x + countSetBits(x) == n):
+#         if (x + countSetBits(x) == n):
             
-            return False
+#             return False
     
-    return True
+#     return True
 
-#examples:
-if(isBleak(3)):
-    print('Yes')
-else:
-    print('No')
+# #examples:
+# if(isBleak(3)):
+#     print('Yes')
+# else:
+#     print('No')
 
-if(isBleak(4)):
-    print('Yes')
-else:
-    print('No')
+# if(isBleak(4)):
+#     print('Yes')
+# else:
+#     print('No')
+
+
+# method 3
+
+def bitsoncounts(i):
+    assert 0 <= i < 0x100000000
+    i = i - ((i >> 1) & 0x55555555)
+    i = (i & 0x33333333) + ((i >> 2) & 0x33333333)
+    return (((i + (i >> 4) & 0xF0F0F0F) * 0x1010101) & 0xffffffff) >> 24
+
+#example
+if __name__ == "__main__":
+    x = 4
+    y = 15
+    print(bitsoncounts(x))
+    print(bitsoncounts(y))
