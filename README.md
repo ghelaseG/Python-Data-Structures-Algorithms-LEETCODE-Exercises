@@ -25,6 +25,7 @@ Maths Practice:
 - Essence of linear algebra : [3Blue1Brown](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&ab_channel=3Blue1Brown)
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
 - Maths : [Sahil & Sarra](https://www.youtube.com/watch?v=iF0I2SPk5JU&ab_channel=Sahil%26Sarra)
+- Proof Writing in Maths : [Math Major](https://www.youtube.com/watch?v=45hrjCjBg2U&list=PLVMgvCDIRy1x00m7Oo9XzEkDDACeEK_m-)
 
 Coding Challenges:
 
