@@ -7,7 +7,7 @@ Original dictionaries:
 Combined dictionaries, creating a list of values for each key:
 {'w': [50], 'x': [100, 300], 'y': ['Green', 'Red'], 'z': [400, 600]}
 """
-
+#dictionary
 d1 = {'w': 50, 'x': 100, 'y': 'Green', 'z': 400}
 d2 = {'x': 300, 'y': 'Red', 'z': 600}
 
