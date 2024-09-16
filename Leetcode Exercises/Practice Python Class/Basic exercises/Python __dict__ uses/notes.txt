@@ -1,0 +1,27 @@
+Lessons in dynamic attributes for a class using self.__dict__
+  From python.org documents:
+
+      object.__dict__ :
+        A dictionary or other mapping object
+        used to store an object’s (writable) attributes.
+
+Learn to object.__dict__  for:
+
+1. Setting defaults for the classes/object attributes
+   Kind of like a dynamic template for your objects
+
+2. Defining a flexible constructor can be called with attributes or
+   allowed to be set to defaults
+
+3. Adding new attributes to class to affect future object instances
+
+4. Adding attributes to specific object dynamically after creation
+
+
+*** this code relies on python version 3.6+ or 3.7+
+
+*** This is just one way to do these things,
+I don't claim they are the most pythonic way.
+
+*** you should already know these concepts:
+ @classmethod, *args, **kwargs, and dict update, enumerate
