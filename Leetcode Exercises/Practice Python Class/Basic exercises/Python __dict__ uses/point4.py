@@ -16,11 +16,11 @@ class Point(object):
         return math.hypot(self.x - other_point.x, self.y - other_point.y)
     
     def __repr__(self): 
-        return str(self.__init__)
+        return str(self.__dict__)
     
 def run(): # modified
     p1 = Point()
-    print(f'p1: {p1}')
+    print(f'p1:{p1}')
     Point.set_defaults(x = 99)
 
     p2 = Point()
