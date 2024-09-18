@@ -5,7 +5,7 @@ Write a Python program that imports the abs() function using the builtins module
 
 import builtins
 
-help(builtins.abs)
+#help(builtins.abs)
 
 input_a = int(input('Write a negative number:'))
 transforms = builtins.abs(input_a)
