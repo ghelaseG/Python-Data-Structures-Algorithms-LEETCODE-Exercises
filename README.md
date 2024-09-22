@@ -43,6 +43,7 @@ Patterns and Constraints:
 
 
 System Design:
+
 - GitHub : [Donne Martin](https://github.com/donnemartin/system-design-primer)
 - YouTube : [ByteByteGo](https://www.youtube.com/watch?v=lX4CrbXMsNQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&ab_channel=ByteByteGo)
 
@@ -78,3 +79,4 @@ Competitive Programming:
 
 - YouTube : [Rachit Jain](https://www.youtube.com/watch?v=IIKTGg5AKkY&list=PLfBJlB6T2eOuDDm9xscqMZR3nnLP5FiyN&ab_channel=RachitJain)
 
+- Practice : [codeforces](https://codeforces.com/)
