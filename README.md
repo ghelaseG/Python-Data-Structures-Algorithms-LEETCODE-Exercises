@@ -77,6 +77,9 @@ Competitive Programming:
 
 - Book : [128 Algorithms to Develop your Coding Skills](https://www.amazon.co.uk/Competitive-Programming-Python-Algorithms-Develop/dp/1108716822/ref=pd_bxgy_thbs_d_sccl_1/257-6512707-8623840?pd_rd_w=EUevC&content-id=amzn1.sym.a08eede5-3393-433c-bbdb-c853fc4fd321&pf_rd_p=a08eede5-3393-433c-bbdb-c853fc4fd321&pf_rd_r=ZRFYWRNWD4MHRA3C8CGA&pd_rd_wg=nxZOn&pd_rd_r=31ac70e0-ad85-4553-9bcf-b866f5ead634&pd_rd_i=1108716822&psc=1)
 
+- Book : [Competitive Programming 4](https://www.amazon.co.uk/COMPETITIVE-PROGRAMMING-4-BO/dp/B093K67NVN/ref=sr_1_3?crid=14Q2XA4LZQC1R&dib=eyJ2IjoiMSJ9.tMj5AY302WG8F5hZ7q-TJPsTZWz5yM4T6F20CvtH-r5trTFm1lhNxO-h77RoBSpoortZ1BtbzEKigN0SJOibkdI0F2OhXmK7EPXKjoI6ZT6hn_BlKFk91FK3Ea7zLWIfHysGVSq7SIEaguDy-79zQI9dUUcP5eZnNlsI6X7GJOCRhdW-H-DgY6P7-0XXwW2FwSwDe-stsvgrLmj2DujSD3GAbctVnsmuGYronM_pP7k.O9RrhMHDvY5B0a3QR8llNEoIMZUUVRsNympPMXOignU&dib_tag=se&keywords=competitive+programming&nsdOptOutParam=true&qid=1727044930&sprefix=competitive+programming%2Caps%2C115&sr=8-3)
+
+
 - YouTube : [Rachit Jain](https://www.youtube.com/watch?v=IIKTGg5AKkY&list=PLfBJlB6T2eOuDDm9xscqMZR3nnLP5FiyN&ab_channel=RachitJain)
 
 - Practice : [codeforces](https://codeforces.com/)
