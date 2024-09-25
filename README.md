@@ -86,3 +86,5 @@ Competitive Programming:
 - YouTube : [Rachit Jain](https://www.youtube.com/watch?v=IIKTGg5AKkY&list=PLfBJlB6T2eOuDDm9xscqMZR3nnLP5FiyN&ab_channel=RachitJain)
 
 - Practice : [codeforces](https://codeforces.com/)
+
+- Roadmap : [GeeksforGeeks](https://www.geeksforgeeks.org/competitive-programming-cp-handbook-with-complete-roadmap/)
