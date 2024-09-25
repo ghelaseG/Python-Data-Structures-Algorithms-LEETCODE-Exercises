@@ -22,7 +22,8 @@ Favourite Resources:
 
 Maths Practice:
 
-- Courses on Udemy to master Math by Coding: [Mike X Cohen](https://www.udemy.com/course/math-with-python/?couponCode=ST9MT71624#reviews), [Krista King](https://www.udemy.com/course/integralcalc-algebra/?couponCode=ST9MT71624)
+- Great algorithms explanation with exercises : [CP-Algorithm](https://cp-algorithms.com/index.html) 
+- Courses on Udemy to master Math by Coding : [Mike X Cohen](https://www.udemy.com/course/math-with-python/?couponCode=ST9MT71624#reviews), [Krista King](https://www.udemy.com/course/integralcalc-algebra/?couponCode=ST9MT71624)
 - Statistics and probability : [Khan Academy](https://www.khanacademy.org/math/statistics-probability)
 - Essence of linear algebra : [3Blue1Brown](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&ab_channel=3Blue1Brown)
 - Interactive way to learn maths etc : [Brilliant](https://brilliant.org/home/)
