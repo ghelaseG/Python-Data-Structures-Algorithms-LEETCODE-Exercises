@@ -19,6 +19,7 @@ Favourite Resources:
 - YouTube : [Freecodecamp(Joy-Brock)](https://www.youtube.com/watch?v=fW_OS3LGB9Q&t=8s&ab_channel=freeCodeCamp.org)
 - YouTube : [MIT](https://www.youtube.com/watch?v=ZusiKXcz_ac&t=10s)
 - YouTube - great advice : [code Explainer](https://www.youtube.com/watch?v=Uq8sGebGQfk&ab_channel=codeExplainer)
+- YouTube - great advice part 2 : [code Explainer](https://www.youtube.com/watch?v=_hrCX95UfDw&ab_channel=codeExplainer)
 
 
 Maths Practice:
