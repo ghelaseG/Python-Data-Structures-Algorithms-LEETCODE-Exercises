@@ -33,10 +33,10 @@ Maths Practice:
 - Proof Writing in Maths : [Math Major](https://www.youtube.com/watch?v=45hrjCjBg2U&list=PLVMgvCDIRy1x00m7Oo9XzEkDDACeEK_m-)
 
 
-Coding Challenges:
+Coding Challenges/Practice:
 
 - Interactive Coding Challenges : [GitHub](https://github.com/donnemartin/interactive-coding-challenges?tab=readme-ov-file#arrays-and-strings)
-
+- Coding Practice : [CodingBat](https://codingbat.com/python)
 
 Patterns and Constraints:
 
