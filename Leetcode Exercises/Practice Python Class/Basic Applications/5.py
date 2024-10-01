@@ -6,3 +6,12 @@ Output: 3, 4
 
 Difficulty: Medium. Company: Google, Facebook
 """
+class Solution5:
+    def twoSum(self, nums, target):
+        lookup = {}
+        for i, num in enumerate(nums):
+            if target - num in lookup:
+                return (lookup[target - num], i)
+            lookup[num] = i
+
+print("index1 = %d, index2 = %d" % Solution5().twoSum((10,20,10,40,50,60,70),50))
