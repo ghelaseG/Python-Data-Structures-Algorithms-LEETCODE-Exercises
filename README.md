@@ -85,6 +85,12 @@ Competitive Programming:
 
 - YouTube : [Rachit Jain](https://www.youtube.com/watch?v=IIKTGg5AKkY&list=PLfBJlB6T2eOuDDm9xscqMZR3nnLP5FiyN&ab_channel=RachitJain)
 
+
 - Practice : [codeforces](https://codeforces.com/)
+             [Microsoft Imagine Cup](https://imaginecup.microsoft.com/en-us)
+             [Meta Hacker Cup](https://www.facebook.com/codingcompetitions/hacker-cup)
+             [Top Coder - U.S.](https://www.topcoder.com/)
+             [At Coder - Japan](https://atcoder.jp/)
+             
 
 - Roadmap : [GeeksforGeeks](https://www.geeksforgeeks.org/competitive-programming-cp-handbook-with-complete-roadmap/)
