@@ -15,7 +15,7 @@ class Solution6:
                 elif nums[i] + nums[j] + nums[k] > 0:
                     k -= 1
                 else:
-                    result.append(nums[i], nums[j], nums[k])
+                    result.append([nums[i], nums[j], nums[k]])
                     j, k = j + 1, k - 1
                     while j < k and nums[j] == nums[j - 1]:
                         j += 1
