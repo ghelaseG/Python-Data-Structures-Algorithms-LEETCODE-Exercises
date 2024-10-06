@@ -12,6 +12,7 @@ Favourite Resources:
 - Roadmap : [Neetcode](https://neetcode.io/roadmap)
 - Roadmap 2 : [Greg Hogg](https://www.youtube.com/watch?v=w6eZhvzw5VE&list=LL&index=10&ab_channel=GregHogg)[Greg Hogg](https://www.youtube.com/watch?v=5rZk99AGVNc&list=LL&index=6&ab_channel=GregHogg)
 - Roadmap 3 : [Hitesh Choudhary](https://www.youtube.com/watch?v=0NUKHCrk4oA&ab_channel=HiteshChoudhary)
+- Roadmap 4 : [Roadmap.sh](https://roadmap.sh/datastructures-and-algorithms)
 - Course : [Udemy](https://www.udemy.com/course/data-structures-algorithms-python/?couponCode=ST13MT40224)
 - Github resources: [Github](https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file)
 - YouTube shorts : [Greg Hogg](https://youtube.com/@GregHogg?si=-yiRrGiBHYJrenKK)
