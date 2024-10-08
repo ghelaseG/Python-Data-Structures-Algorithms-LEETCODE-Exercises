@@ -11,14 +11,34 @@ Note: Use dictionaries and lists to store the data.
 """
 
 class Restaurant:
-    def __init__(self, menu_items, book_table, customer_orders):
-        self.menu = menu_items
-        self.booking = book_table
-        self.orders = customer_orders
+    #Use dictionaries and lists to store the data.
+    def __init__(self):
+        self.menu_items = {}
+        self.book_table = []
+        self.customer_orders = []
 
-    def add_item_to_menu(self,):
+    def add_item_to_menu(self, item, price):
+        self.menu_items[item] = price
 
-    def book_tables(self, ):
+    def book_tables(self, table_number):
+        self.book_table.append(table_number)
 
-    def customer_order(self, ):
-        
+    def customer_order(self, table_number, order):
+        order_details = {'table_number': table_number, 'order': order}
+        self.customer_orders.append(order_details)
+
+    def print_menu_items(self):
+        for item, price in self.menu_items.items():
+            print(f'{item} : {price}')
+
+    def print_table_reservations(self):
+        for table in self.book_table:
+            print(f'Table {table}')
+
+    def print_customer_orders(self):
+        for order in self.customer_orders:
+            print(f"Table {order['table number']} : {order['order']}")
+
+
+restaurant = Restaurant()
+
