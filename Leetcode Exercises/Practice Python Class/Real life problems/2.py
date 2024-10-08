@@ -10,3 +10,15 @@ Print customer orders.
 Note: Use dictionaries and lists to store the data.
 """
 
+class Restaurant:
+    def __init__(self, menu_items, book_table, customer_orders):
+        self.menu = menu_items
+        self.booking = book_table
+        self.orders = customer_orders
+
+    def add_item_to_menu(self,):
+
+    def book_tables(self, ):
+
+    def customer_order(self, ):
+        
