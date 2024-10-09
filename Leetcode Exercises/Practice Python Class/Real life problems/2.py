@@ -42,3 +42,27 @@ class Restaurant:
 
 restaurant = Restaurant()
 
+print("\nAdding items to the menu.")
+restaurant.add_item_to_menu('Cheeseburger', 9.99)
+restaurant.add_item_to_menu('Caesar Salad', 8)
+restaurant.add_item_to_menu('Grilled Salmon', 19.99)
+restaurant.add_item_to_menu('French Fries', 3.99)
+
+print("\nBooking Table.")
+restaurant.book_tables(1)
+restaurant.book_tables(2)
+restaurant.book_tables(3)
+
+print("\nItems ordered.")
+restaurant.customer_order(1, "Cheeseburger")
+restaurant.customer_order(1, "French Fries")
+restaurant.customer_order(2, "Grilled Salmon")
+
+print("\nPopular dishes in the restaurant along with their prices:")
+restaurant.print_menu_items()
+
+print("\nTable reserved in the restaurant:")
+restaurant.print_table_reservations()
+
+print("\nPrint customer orders:")
+restaurant.print_customer_orders()
