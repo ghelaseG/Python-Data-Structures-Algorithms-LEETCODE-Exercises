@@ -35,9 +35,9 @@ class Restaurant:
         for table in self.book_table:
             print(f'Table {table}')
 
-    def print_customer_orders(self):
+    def print_customer_order(self):
         for order in self.customer_orders:
-            print(f"Table {order['table number']} : {order['order']}")
+            print(f"Table {order['table_number']} : {order['order']}")
 
 
 restaurant = Restaurant()
@@ -65,4 +65,4 @@ print("\nTable reserved in the restaurant:")
 restaurant.print_table_reservations()
 
 print("\nPrint customer orders:")
-restaurant.print_customer_orders()
+restaurant.print_customer_order()
