@@ -49,13 +49,13 @@ print("=============================")
 ac_no_4.print_customer_details()
 # Current balance is $3000.
 # $1000 has been deposited in your account.
-ac_no_4.deposit(1000)
+ac_no_4.deposit('1000')
 ac_no_4.check_balance()
 # Your current balance $4000.
 # You want to withdraw $5000
-ac_no_4.withdraw(5000)
+ac_no_4.withdraw('5000')
 # Output:
 # Insufficient balance.
 #The customer withdraw $3400.
-ac_no_4.withdraw(3400)
+ac_no_4.withdraw('3400')
 ac_no_4.check_balance()
