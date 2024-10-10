@@ -3,7 +3,7 @@ Write a Python class BankAccount with attributes like account_number, balance, d
 """
 
 class BankAccount:
-    def __init__(self, account_number, balance, date_of_opening, customer_name):
+    def __init__(self, account_number, date_of_opening, balance, customer_name):
         self.account_number = account_number
         self.balance = balance
         self.date_of_opening = date_of_opening
@@ -49,13 +49,13 @@ print("=============================")
 ac_no_4.print_customer_details()
 # Current balance is $3000.
 # $1000 has been deposited in your account.
-ac_no_4.deposit('1000')
+ac_no_4.deposit(1000)
 ac_no_4.check_balance()
 # Your current balance $4000.
 # You want to withdraw $5000
-ac_no_4.withdraw('5000')
+ac_no_4.withdraw(5000)
 # Output:
 # Insufficient balance.
 #The customer withdraw $3400.
-ac_no_4.withdraw('3400')
+ac_no_4.withdraw(3400)
 ac_no_4.check_balance()
