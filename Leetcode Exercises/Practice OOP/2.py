@@ -18,8 +18,12 @@ class Person:
             age -= 1
         return age
     
-person1 = Person("Ferdi Odilia", "France", date(1962, 7, 12))
+person1 = Person("Ferdi Odilia", "France", date(2026, 7, 12))
 person2 = Person("Shweta Maddox", "Canada", date(1982, 10, 20))
 person3 = Person("Elizaveta Tilman", "USA", date(2000, 1, 1))
 
-
+print("Person 1:")
+print("Name:", person1.name)
+print("Country:", person1.country)
+print("Date of Birth:", person1.date_of_birth)
+print("Age:", person1.calculate_age())
