@@ -58,3 +58,16 @@ class Triangle(Shape):
     #formula for perimeter: add the length of its three sides
     def calculate_perimeter(self):
         return self.side1 + self.side2 + self.side3
+    
+# Examples:
+    
+## Create a Circle object with a given radius and calculate its area and perimeter
+
+r = 7
+circle = Circle(r)
+circle_area = circle.calculate_area()
+circle_perimeter = circle.calculate_perimeter()
+
+print("Radius of the circle:", r)
+print("Circle Area:", circle_area)
+print("Circle Perimeter:", circle_perimeter)
