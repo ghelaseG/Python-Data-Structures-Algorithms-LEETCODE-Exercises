@@ -48,7 +48,7 @@ class BinarySearchTree:
 
     #search for a value in the BST
     def search(self, value):
-        return self._search_recursive(self.root, value):
+        return self._search_recursive(self.root, value)
     
     #helper method to recursively search for a value in the BST and return the node if found
     def _search_recursive(self, node, value):
@@ -61,5 +61,17 @@ class BinarySearchTree:
         
 bst = BinarySearchTree()
 
+#insert values into the BST
 
+bst.insert(5)
+bst.insert(3)
+bst.insert(7)
+bst.insert(2)
+bst.insert(4)
+bst.insert(6)
+bst.insert(8)
+
+print("Searching for elements:")
+print(bst.search(4))  
+print(bst.search(9))  
     
