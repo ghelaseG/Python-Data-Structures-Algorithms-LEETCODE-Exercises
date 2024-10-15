@@ -71,3 +71,31 @@ circle_perimeter = circle.calculate_perimeter()
 print("Radius of the circle:", r)
 print("Circle Area:", circle_area)
 print("Circle Perimeter:", circle_perimeter)
+
+## Create a Rectangle object with given length and width 
+
+l = 4
+w = 10
+
+rectangle = Rectangle(l, w)
+rectangle_area = rectangle.calculate_area()
+rectangle_perimeter = rectangle.calculate_perimeter()
+
+print("\nRectangle: Length:", l, "Width:", w)
+print("Rectangle Area:", rectangle_area)
+print("Rectangle Perimeter:", rectangle_perimeter)
+
+## Create a Triangle object with given stats
+
+base = 5
+height = 4
+s1 = 4
+s2 = 3
+s3 = 5
+
+print("\nTriangle: Base =", base, " Height =", height, " side1 =", s1, " side2 =", s2, " side3 =", s3)
+triangle = Triangle(base, height, s1, s2, s3)
+triangle_area = triangle.calculate_area()
+triangle_perimeter = triangle.calculate_perimeter()
+print("Triangle Area:", triangle_area)
+print("Triangle Perimeter:", triangle_perimeter)
