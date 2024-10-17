@@ -42,4 +42,13 @@ for item in cart.items:
 
 total_qty = cart.calculate_total()
 print("Total Quantity:", total_qty)
-    
+
+#remove an item, display the new cart and calculate the total
+
+cart.remove_item("Orange")
+print("\nUpdated Items in the Cart after removing Orange:")
+for item in cart.items:
+    print(item[0], "-", item[1])
+
+total_qty = cart.calculate_total()
+print("Total Quantity:", total_qty)    
