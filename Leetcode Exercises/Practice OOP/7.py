@@ -65,3 +65,7 @@ linked_list.display()
 linked_list.insert(5)
 print("After inserting a new node:")
 linked_list.display()
+
+linked_list.delete(2)
+print("After deleting node 2:")
+linked_list.display()
