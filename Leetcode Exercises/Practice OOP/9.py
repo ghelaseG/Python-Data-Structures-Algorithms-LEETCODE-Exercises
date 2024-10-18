@@ -21,3 +21,24 @@ class Stack:
     
     def display(self):
         print("Stack Items", self.items)
+
+stack = Stack()
+
+stack.push(10)
+stack.push(20)
+stack.push(30)
+stack.push(40)
+stack.push(50)
+
+#display the items in the stack
+stack.display()
+
+#pop items from the stack and print the popped items
+popped_item = stack.pop()
+print("Popped item:", popped_item)
+
+popped_item = stack.pop()
+print("Popped item:", popped_item)
+
+#display the updated stack
+stack.display()
