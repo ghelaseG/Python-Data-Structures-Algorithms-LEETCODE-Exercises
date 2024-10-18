@@ -27,6 +27,9 @@ class ShoppingCart:
             total += item[1]
         return total
     
+    def display(self):
+        print("Items in the cart:", self.items)
+    
 cart = ShoppingCart()
 
 #example
@@ -34,6 +37,9 @@ cart = ShoppingCart()
 cart.add_item("Papaya", 100)
 cart.add_item("Guava", 200)
 cart.add_item("Orange", 150)
+
+#display shopping cart
+cart.display()
 
 #display the current item in the cart and calculate the total quantity
 print("Current items in the cart:")
@@ -49,6 +55,9 @@ cart.remove_item("Orange")
 print("\nUpdated Items in the Cart after removing Orange:")
 for item in cart.items:
     print(item[0], "-", item[1])
+
+#display shopping cart
+cart.display()
 
 total_qty = cart.calculate_total()
 print("Total Quantity:", total_qty)    
