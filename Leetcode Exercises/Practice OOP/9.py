@@ -11,8 +11,11 @@ class Stack:
         return self.items.append(item)
     
     def pop(self):
-        return self.items.pop()
-    
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            raise IndexError("Cannot pop from an empty stack.")
+        
     def is_empty(self):
         return len(self.items) == 0
     
