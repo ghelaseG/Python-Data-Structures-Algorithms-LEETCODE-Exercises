@@ -19,4 +19,23 @@ class Queue:
             raise IndexError("Cannot remove from an empty queue")
         
     def is_empty(self):
-        return len(self.items()) == 0
+        return len(self.items) == 0
+    
+
+queue = Queue()
+
+queue.enqueue(10)
+queue.enqueue(20)
+queue.enqueue(30)
+queue.enqueue(40)
+queue.enqueue(50)
+
+print("Current queue:", queue.items)
+
+dequeued_item = queue.dequeue()
+print("Dequeued item:", dequeued_item)
+
+dequeued_item = queue.dequeue()
+print("Dequeued item:", dequeued_item)
+
+print("Updated queue:", queue.items)
