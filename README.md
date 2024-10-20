@@ -1,10 +1,11 @@
 Favourite Resources:
 
+- Visualize and Debug Code : [Python Tutor](https://pythontutor.com)
+- Beautiful Free Math : [Desmos](https://www.desmos.com/)
+- Get visuals from your text : [Napkin](https://www.napkin.ai/)
 - Drawing Whiteboard (visualize the steps) : [Whiteboard](https://webwhiteboard.com/)
 - Big O Cheatsheet : [BigO](https://www.bigocheatsheet.com/)
 - Big O Good Explanation(40:00 : ...) : [FreeCodeCamp](https://www.youtube.com/watch?v=8hly31xKli0&t=11s&ab_channel=freeCodeCamp.org)
-- Visualize and Debug Code : [Python Tutor](https://pythontutor.com)
-- Beautiful Free Math : [Desmos](https://www.desmos.com/)
 - Data Structure/Algorithms Visualizations : [myUSF](https://www.cs.usfca.edu/~galles/visualization/)
 [Visualgo](https://visualgo.net/en)
 [Mike Bostock](https://bost.ocks.org/mike/)
