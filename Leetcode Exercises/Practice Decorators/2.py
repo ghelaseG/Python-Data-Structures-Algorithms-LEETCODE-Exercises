@@ -16,14 +16,25 @@ def measure_execution_time(func):
         return result
     return wrapper
 
-#example
+#example using args
 @measure_execution_time
-def calculate_x(numbers):
+def calculate_x(*numbers):
     total = 1
     for x in numbers:
         total = total * x
     return total
 
 #call the decorated function
-result = calculate_x([1,2,3,4,5])
+result = calculate_x(1,2,3,4,5)
+print("Result:", result)
+
+#example using kwargs
+@measure_execution_time
+def calculate_y(**numbers):
+    total = 1
+    for x, y in numbers.items():
+        total *= y
+    return total
+
+result = calculate_y(a=1, b=2, c=3)
 print("Result:", result)
