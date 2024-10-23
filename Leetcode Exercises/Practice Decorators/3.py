@@ -11,7 +11,7 @@ def convert_to_data_type(data_type):
     return decorator
 
 #examples
-@convert_to_data_type
+@convert_to_data_type(int)
 def add_numbers(x, y):
     return x + y
 
@@ -19,9 +19,9 @@ result = add_numbers(10, 40)
 print("Result:", result, type(result))
 
 
-@convert_to_data_type
+@convert_to_data_type(str)
 def concatenate_str(x, y):
     return x + y
 
-result = concatenate_str("Python", "Decorator")
+result = concatenate_str("Python", " Decorator")
 print("Result:", result, type(result))
