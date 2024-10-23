@@ -9,3 +9,19 @@ def convert_to_data_type(data_type):
             return data_type(result)
         return wrapper
     return decorator
+
+#examples
+@convert_to_data_type
+def add_numbers(x, y):
+    return x + y
+
+result = add_numbers(10, 40)
+print("Result:", result, type(result))
+
+
+@convert_to_data_type
+def concatenate_str(x, y):
+    return x + y
+
+result = concatenate_str("Python", "Decorator")
+print("Result:", result, type(result))
