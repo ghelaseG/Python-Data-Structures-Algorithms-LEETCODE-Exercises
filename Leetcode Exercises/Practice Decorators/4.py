@@ -4,7 +4,7 @@ Write a Python program that implements a decorator to cache the result of a func
 
 def cache_result(func):
     cache = {}
-
+    #we build this wrapper to add extra functionality to our main function
     def wrapper(*args, **kwargs):
         key = (*args, *kwargs.items())
 
@@ -31,3 +31,7 @@ print(calculate_multiply(5, 7))  # Calculation is performed
 print(calculate_multiply(5, 7))  # Result is retrieved from cache
 print(calculate_multiply(-3, 7))  # Calculation is performed
 print(calculate_multiply(-3, 7))  # Result is retrieved from cache
+
+"""
+!info: we need this cache function because of the repetitive operations, instead of doing the same thing 2 times or more times, we just retrieved from our cache.
+"""
