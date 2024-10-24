@@ -33,5 +33,5 @@ print(calculate_multiply(-3, 7))  # Calculation is performed
 print(calculate_multiply(-3, 7))  # Result is retrieved from cache
 
 """
-!info: we need this cache function because of the repetitive operations, instead of doing the same thing 2 times or more times, we just retrieved from our cache.
+!info: we need this cache function because of the repetitive operations, instead of doing the same thing 2 times or more times, we just retrieved the result from our cache.
 """
