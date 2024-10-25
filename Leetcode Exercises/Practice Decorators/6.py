@@ -19,3 +19,20 @@ def retry_on_failure(max_retries, delay = 1):
         
         return wrapper
     return decorator
+
+@retry_on_failure(max_retries=3, delay=2)
+def connect_to_sql():
+    conn = sqlite3.connect("example.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users")
+    result = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return result
+
+try:
+    data = connect_to_sql()
+    print("Data retrieved successfully:", data)
+except Exception as e:
+    print(f"Failed to connect to database: {e}")
+    
