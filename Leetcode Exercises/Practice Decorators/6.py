@@ -24,7 +24,14 @@ def retry_on_failure(max_retries, delay = 1):
 def connect_to_sql():
     conn = sqlite3.connect("example.db")
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM users")
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY,
+        username TEXT NOT NULL,
+        email TEXT NOT NULL UNIQUE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+''')
     result = cursor.fetchall()
     cursor.close()
     conn.close()
