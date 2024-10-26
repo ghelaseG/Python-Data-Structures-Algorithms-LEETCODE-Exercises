@@ -28,3 +28,15 @@ def rate_time_limits(max_calls, period):
         
         return wrapper
     return decorator
+
+@rate_time_limits(max_calls=8, period=12)
+
+def api_call():
+    print("API call executed (..)")
+
+#let's make this api calls
+for i in range(10):
+    try:
+        api_call()
+    except Exception as e:
+        print(f"Error occurred: {e}")
