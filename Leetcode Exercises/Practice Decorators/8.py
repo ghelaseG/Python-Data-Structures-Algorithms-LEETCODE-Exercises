@@ -6,3 +6,15 @@ Write a Python program that implements a decorator to add logging functionality 
 Logging functionality refers to the capability of recording and storing information about program execution. It allows you to capture significant events, messages, and errors that occur during code execution.
 """
 
+def logging_info(func):
+    def wrapper(*args, **kwargs):
+        #log the func name and arguments
+        print(f"Calling {func.__name__} with args: {args}, kwargs: {kwargs}")
+
+        result = func(*args, **kwargs)
+
+        #log the return value
+        print(f"{func.__name__} returned: {result}")
+
+        return result
+    return wrapper
