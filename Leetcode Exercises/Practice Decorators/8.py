@@ -18,3 +18,11 @@ def logging_info(func):
 
         return result
     return wrapper
+
+@logging_info
+def add_num(x, y):
+    return x + y
+
+#call the decorated function
+result = add_num(100, 150)
+print("Result:", result)
