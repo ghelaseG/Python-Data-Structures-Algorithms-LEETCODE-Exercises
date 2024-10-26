@@ -1,5 +1,5 @@
 """"
-You can use the following to run only one of the secondary functions interactive way:
+You can use the following to run only one of the secondary functions interactive way (# %%):
 """
 
 
