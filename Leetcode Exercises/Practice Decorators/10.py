@@ -12,7 +12,7 @@ def enforce_type_checking(func):
 
         #iterate over the positional arguments
         for i, arg in enumerate(args):
-            param_name = list(parameters.keys)[i]
+            param_name = list(parameters.keys())[i]
             param_type = parameters[param_name].annotation
             if not isinstance(arg, param_type):
                 raise TypeError(f"Argument '{param_name}' must be of type '{param_type.__name__}'")
