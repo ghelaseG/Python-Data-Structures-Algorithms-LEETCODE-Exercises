@@ -18,3 +18,17 @@ def cache_with_expiry(expiry_time):
             return result
         return wrapper
     return decorator
+
+#example
+#set up expiry time to 5 seconds
+@cache_with_expiry(expiry_time=5) 
+def calculate_multiply(x, y):
+    print("Calculating product of two numbers ...")
+    return x * y
+
+#call the decorated function multiple times
+print(calculate_multiply(23,5))
+print(calculate_multiply(23,5)) #getting result from cache
+time.sleep(5)
+print(calculate_multiply(23, 5)) ##calculation is performed (cache expired)
+
