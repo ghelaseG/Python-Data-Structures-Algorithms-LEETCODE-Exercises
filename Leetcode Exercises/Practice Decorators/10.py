@@ -27,3 +27,15 @@ def enforce_type_checking(func):
         return func(*args, **kwargs)
     
     return wrapper
+
+# example usage
+@enforce_type_checking
+
+def multiply_num(x: int, y: int) -> int:
+    return x * y
+
+result = multiply_num(5, 7)
+print("Result: ", result)
+
+#2nd example Typer error' 'x' must be of type 'int'
+result = multiply_num("5", 7) 
