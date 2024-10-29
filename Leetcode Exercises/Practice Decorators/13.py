@@ -12,3 +12,11 @@ def add_num(x: int, y: float) -> float:
 #signature prints the parameters of the function
 sig = signature(add_num)
 print(sig)
+
+
+for param_name, annot in sig.parameters.items():
+    print(f"Parameter '{param_name}' has annotation: {annot.annotation}")
+
+#this will print what is after the arrow '-> float'
+return_annotation = sig.return_annotation
+print(f"The return type annotation is: {return_annotation}")
