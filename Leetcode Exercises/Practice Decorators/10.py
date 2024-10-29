@@ -38,4 +38,8 @@ result = multiply_num(5, 7)
 print("Result: ", result)
 
 #2nd example Typer error' 'x' must be of type 'int'
-result = multiply_num("5", 7) 
+#result = multiply_num("5", 7) 
+
+
+#playing with the inspect function
+print(inspect.getsource(enforce_type_checking))
