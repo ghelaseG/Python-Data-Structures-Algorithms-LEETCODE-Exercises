@@ -1,0 +1,9 @@
+Unit tests play a valuable role in data science projects. 
+
+They help ensure your code functions correctly on new datasets and can be easily shared with team members. 
+
+Unit tests also help identify errors that might not be visible from charts alone. 
+
+Incorporating unit tests lowers the chance of mistakes in your analysis, leading to more reliable decisions. 
+
+Making unit testing a regular practice is essential.
