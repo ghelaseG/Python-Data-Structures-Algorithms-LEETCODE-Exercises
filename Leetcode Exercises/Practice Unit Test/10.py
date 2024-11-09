@@ -19,3 +19,15 @@ class TestInputParsing(unittest.TestCase):
         result = parse_and_validate_input(data)
         #assert that the result is True => indicating valid input
         self.assertTrue(result)
+
+        #define a test method to test invalid input data
+        def test_invalid_input(self):
+            #define invalid input data as a string containing non numeric characters
+            data = "Hello"
+            #call the function with the invalid input data
+            result = parse_and_validate_input(data)
+            #assert that the result is False (invalid input)
+            self.assertFalse(result)
+
+if __name__ == '__main__':
+    unittest.main()
