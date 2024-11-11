@@ -14,4 +14,7 @@ def open_file(filename):
         file.close()
     except FileNotFoundError:
         print("Error: File not found")
-        
+
+#usage, prompt the user to input a file name and store it in the filename variable
+file_name = input("Input a file name: ")
+open_file(file_name)
