@@ -1,7 +1,7 @@
 Favourite Resources:
 
 - Visualize and Debug Code : [Python Tutor](https://pythontutor.com)
-- Beautiful Free Math : [Desmos](https://www.desmos.com/)
+- Beautiful Free Math : [Desmos](https://www.desmos.com/)[GeoGebra](https://www.geogebra.org/graphing?lang=en-GB)
 - Data Structure/Algorithms Visualizations : [myUSF](https://www.cs.usfca.edu/~galles/visualization/)
 [Visualgo](https://visualgo.net/en)
 [Mike Bostock](https://bost.ocks.org/mike/)
