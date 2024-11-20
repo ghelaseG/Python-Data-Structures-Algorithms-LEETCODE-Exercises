@@ -29,7 +29,7 @@ class Solution:
             if num in hashmap:
                 return True
             else:
-                hashmap[num] = 2
+                hashmap[num] = 'again'
         
         return False
     
