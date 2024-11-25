@@ -1,33 +1,28 @@
+
 from typing import List
-
-# class Solution:
-#     def two_sum(self, nums: List[int], target: int) -> List[int]:
-#         for i in range(len(nums)):
-#             for j in range(i + 1, len(nums)):
-#                 if nums[i] + nums[j] == target:
-#                     return [i, j]
-#         return []
-    
-# nums = [3,4,5,6] 
-# target = 7
-
-# solution =  Solution()
-# print(solution.two_sum(nums, target))
+from collections import defaultdict
 
 class Solution:
-    def two_sum(self, nums: List[int], target: int) -> List[int]:
-        indices = {} #value is the index
+    def group_anagrams(self, strs: List[str]) -> List[List[str]]: 
+        result = defaultdict(list)
 
-        for i, j in enumerate(nums):
-            indices[j] = i
+        for s in strs:
+            #in the following we store counts of each character from a to z
+            count = [0] * 26
 
-        for i, j in enumerate(nums):
-            difference = target - j
-            if difference in indices and indices[difference] != i:
-                return [i, indices[difference]]
+            for char in s:
+                #substract ASCII of c with "a" and store count of character in array
+                count[ord(char) - ord("a")] += 1
+                # Example ASCII(a) = 80, 80-80=0
+                #         ASCII(b) = 81, 81-80=1
+                #         ASCII(z) = 105, 105-80=25
 
-nums = [3,4,5,6] 
-target = 7
-            
-solution =  Solution()
-print(solution.two_sum(nums, target))
+            result[tuple(count)].append(s)
+
+        return result.values()
+    
+
+strs = ["act","pots","tops","cat","stop","hat"]
+
+solution = Solution()
+print(solution.group_anagrams(strs))
