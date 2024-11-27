@@ -1,20 +1,31 @@
+"""
+Given an integer array nums and an integer k, return the k most frequent elements within the array.
+
+The test cases are generated such that the answer is always unique.
+
+You may return the output in any order.
+"""
 from typing import List
-from collections import defaultdict
 
 class Solution:
-    def group_anagrams(self, strs: List[str]) -> List[List[str]]:
-        hash_map = defaultdict(list)
-        result = []
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 
-        for s in strs:
-            sorted_s = tuple(sorted(s))
-            hash_map[sorted_s].append(s)
+        count = {}
+        for num in nums:
+            count[num] = 1 + count.get(num, 0)
 
-        for value in hash_map.values():
-            result.append(value)
+        arr = []
+        for i, j in count.items():
+            arr.append([j, i])
+        arr.sort()
 
-        return result
+        res = []
+        while len(res) < k:
+            res.append(arr.pop()[1])
+        return res
     
-strs = ["act","pots","tops","cat","stop","hat"]
+nums = [1,2,2,3,3,3]
+k = 2
+
 solution = Solution()
-print(solution.group_anagrams(strs))
+print(solution.topKFrequent(nums, k))
