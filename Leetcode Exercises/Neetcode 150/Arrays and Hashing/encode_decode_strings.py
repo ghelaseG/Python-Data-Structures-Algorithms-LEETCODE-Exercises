@@ -3,3 +3,11 @@ Design an algorithm to encode a list of strings to a single string. The encoded 
 
 Please implement encode and decode
 """
+
+class Solution:
+
+    def encode(self, strs: List[str]) -> str:
+
+    def decode(self, s: str) -> List[str]:
+
+        
