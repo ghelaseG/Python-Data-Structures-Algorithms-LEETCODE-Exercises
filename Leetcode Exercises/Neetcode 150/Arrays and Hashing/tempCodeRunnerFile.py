@@ -1,25 +1,50 @@
+"""
+Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
+
+Please implement encode and decode
+"""
 from typing import List
 
 class Solution:
-    def top_k_frequent(self, nums: List[int], k: int) -> List[int]:
-        count = {}
-        freq = [[] for i in range(len(nums) + 1)]
 
-        for num in nums:
-            count[num] = 1 + count.get(num, 0)
-        for num, cnt in count.items():
-            freq[cnt].append(num)
+    def encode(self, strs: List[str]) -> str:
+        if not strs:
+            return ""
+        
+        sizes, res = [], ""
+        for s in strs:
+            sizes.append(len(s))
+        for sz in sizes:
+            res += str(sz)
+            res += ','
+        res += '#'
+        for s in strs:
+            res += s
+        return res
 
-        res = []
-        for i in range(len(freq) - 1, 0, -1):
-            for num in freq[i]:
-                res.append(num)
-                if len(res) == k:
-                    return res
 
+    def decode(self, s: str) -> List[str]:
 
-nums = [1,2,2,3,3,3]
-k = 2
+        if not s:
+            return []
+        
+        sizes, res, i = [], [], 0
+        while s[i] != '#':
+            cur = ""
+            while s[i] != ',':
+                cur += s[i]
+                i += 1
+            sizes.append(int(cur))
+            i += 1
+        i += 1
+        for sz in sizes:
+            res.append(s[i:i + sz])
+            i += sz
+        return res
 
 solution = Solution()
-print(solution.top_k_frequent(nums, k))
+
+strs = ["gg","does","love","you"]
+s = solution.encode(strs)
+
+print(s)
