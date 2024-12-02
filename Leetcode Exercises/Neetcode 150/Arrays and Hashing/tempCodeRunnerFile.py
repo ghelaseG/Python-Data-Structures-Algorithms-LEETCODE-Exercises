@@ -1,36 +1,23 @@
 from typing import List
 
 class Solution:
+    def product_except_self(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        res = [0] * n
 
-    def encode(self, strs: List[str]) -> str:
-        result = ""
-        for s in strs:
-            result += str(len(s)) + "#" + s
-        return result
-    
-    def decode(self, s: str) -> List[str]:
-        result = []
-        i = 0
-        
-        while i < len(s):
-            j = i
-            while s[j] != '#':
-                j += 1
-            length = int(s[i:j])
-            i = j + 1
-            j = i + length
-            result.append(s[i:j])
-            i = j
-        
-        return result
+        for i in range(n):
+            prod = 1
+            for j in range(n):
+                if i == j:
+                    continue
+                prod *= nums[j]
+            
+            res[i] = prod
+        return res
 
 solution = Solution()
 
-strs = ["gg","does","love","you"]
-s = solution.encode(strs)
+nums = [1,2,4,6]
 
-print(s)
+print(solution.product_except_self(nums))
 
-r = solution.decode(s)
-
-print(r)
