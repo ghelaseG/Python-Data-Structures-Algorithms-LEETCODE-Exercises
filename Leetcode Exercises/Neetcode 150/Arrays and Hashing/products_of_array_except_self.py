@@ -62,6 +62,8 @@ O(n) time without using the division operation?
 
 # print(solution.product_except_self(nums))
 
+#solution 3 using prefix and suffix (optimal version)
+
 from typing import List
 
 class Solution:
