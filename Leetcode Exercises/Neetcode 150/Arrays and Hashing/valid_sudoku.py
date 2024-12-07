@@ -15,36 +15,55 @@ class Solution:
     def is_valid_sudoku(self, board: List[List[str]]) -> bool:
 
 #part 1 using brute force
-        for row in range(9):
-            seen = set()
-            for i in range(9):
-                if board[row][i] == ".":
-                    continue
-                if board[row][i] in seen:
-                    return False
-                seen.add(board[row][i])
+        # for row in range(9):
+        #     seen = set()
+        #     for i in range(9):
+        #         if board[row][i] == ".":
+        #             continue
+        #         if board[row][i] in seen:
+        #             return False
+        #         seen.add(board[row][i])
 
-        for col in range(9):
-            seen = set()
-            for i in range(9):
-                if board[i][col] == ".":
-                    continue
-                if board[i][col] in seen:
-                    return False
-                seen.add(board[i][col])
+        # for col in range(9):
+        #     seen = set()
+        #     for i in range(9):
+        #         if board[i][col] == ".":
+        #             continue
+        #         if board[i][col] in seen:
+        #             return False
+        #         seen.add(board[i][col])
 
-        for square in range(9):
-            seen = set()
-            for i in range(3):
-                for j in range(3):
-                    row = (square//3) * 3 + i
-                    col = (square % 3) * 3 + j
-                    if board[row][col] == ".":
-                        continue
-                    if board[row][col] in seen:
-                        return False
-                    seen.add(board[row][col])
-        return True
+        # for square in range(9):
+        #     seen = set()
+        #     for i in range(3):
+        #         for j in range(3):
+        #             row = (square//3) * 3 + i
+        #             col = (square % 3) * 3 + j
+        #             if board[row][col] == ".":
+        #                 continue
+        #             if board[row][col] in seen:
+        #                 return False
+        #             seen.add(board[row][col])
+        # return True
+
+#part 2 Bitmask
+        
+        rows = [0] * 9
+        cols = [0] * 9
+        squares = [0] * 9
+
+        for r in range(9):
+            for c in range(9):
+                if board[r][c] == ".":
+                    continue
+                    
+                val = int(board[r][c]) - 1
+                if (1 << val) & rows[r]:
+                    return False
+                if (1 << val) & cols[c]:
+                    return False
+                if (1 << val) & squares[(r // 3)] * 3 + (c // 3):
+                    return False
 
 solution = Solution()
 
