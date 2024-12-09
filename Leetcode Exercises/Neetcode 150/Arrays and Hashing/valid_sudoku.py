@@ -62,8 +62,14 @@ class Solution:
                     return False
                 if (1 << val) & cols[c]:
                     return False
-                if (1 << val) & squares[(r // 3)] * 3 + (c // 3):
+                if (1 << val) & squares[(r // 3) * 3 + (c // 3)]:
                     return False
+                
+                rows[r] |= (1 << val)
+                cols[c] |= (1 << val)
+                squares[(r // 3) * 3 + (c // 3)] |= (1 << val)
+            
+            return True
 
 solution = Solution()
 
