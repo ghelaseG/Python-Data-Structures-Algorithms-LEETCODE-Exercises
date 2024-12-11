@@ -9,6 +9,7 @@ Return true if the Sudoku board is valid, otherwise return false
 Note: A board does not need to be full or be solvable to be valid.
 """
 
+from collections import defaultdict
 from typing import List
 
 class Solution:
@@ -46,31 +47,52 @@ class Solution:
         #             seen.add(board[row][col])
         # return True
 
-#part 2 Bitmask
+# #part 2 Bitmask
         
-        rows = [0] * 9
-        cols = [0] * 9
-        squares = [0] * 9
+#         rows = [0] * 9
+#         cols = [0] * 9
+#         squares = [0] * 9
+
+#         for r in range(9):
+#             for c in range(9):
+#                 if board[r][c] == ".":
+#                     continue
+                    
+#                 val = int(board[r][c]) - 1
+#                 if (1 << val) & rows[r]:
+#                     return False
+#                 if (1 << val) & cols[c]:
+#                     return False
+#                 if (1 << val) & squares[(r // 3) * 3 + (c // 3)]:
+#                     return False
+                
+#                 rows[r] |= (1 << val)
+#                 cols[c] |= (1 << val)
+#                 squares[(r // 3) * 3 + (c // 3)] |= (1 << val)
+            
+#             return True
+
+# part 3 using Hash Set
+        
+        cols = defaultdict(set)
+        rows = defaultdict(set)
+        squares = defaultdict(set)
 
         for r in range(9):
             for c in range(9):
                 if board[r][c] == ".":
                     continue
-                    
-                val = int(board[r][c]) - 1
-                if (1 << val) & rows[r]:
-                    return False
-                if (1 << val) & cols[c]:
-                    return False
-                if (1 << val) & squares[(r // 3) * 3 + (c // 3)]:
+                if ( board[r][c] in rows[r]
+                    or board[r][c] in cols[c]
+                    or board[r][c] in squares[(r // 3, c // 3)]):
                     return False
                 
-                rows[r] |= (1 << val)
-                cols[c] |= (1 << val)
-                squares[(r // 3) * 3 + (c // 3)] |= (1 << val)
-            
-            return True
-
+                cols[c].add(board[r][c])
+                rows[r].add(board[r][c])
+                squares[(r // 3, c // 3)].add(board[r][c])
+        
+        return True
+    
 solution = Solution()
 
 board = [["1","2",".",".","3",".",".",".","."],
