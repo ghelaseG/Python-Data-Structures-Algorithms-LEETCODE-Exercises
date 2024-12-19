@@ -20,25 +20,41 @@ class Solution:
         #         curr += 1
         #     result = max(result, streak)
         # return result
-        #part 2
-        if not nums:
-            return 0
-        result = 0
-        nums.sort()
 
-        current, streak = nums[0], 0
-        i = 0
-        while i < len(nums):
-            if current != nums[i]:
-                current = nums[i]
-                streak = 0
-            while i < len(nums) and nums[i] == current:
-                i += 1
-            streak += 1
-            current += 1
-            result = max(result, streak)
-        return result
 
+        # #part 2
+        # if not nums:
+        #     return 0
+        # result = 0
+        # nums.sort()
+
+        # current, streak = nums[0], 0
+        # i = 0
+        # while i < len(nums):
+        #     if current != nums[i]:
+        #         current = nums[i]
+        #         streak = 0
+        #     while i < len(nums) and nums[i] == current:
+        #         i += 1
+        #     streak += 1
+        #     current += 1
+        #     result = max(result, streak)
+        # return result
+
+
+        #part 3
+
+        num_set = set(nums)
+        longest = 0
+
+        for num in num_set:
+            if (num - 1) not in num_set:
+                length = 1
+                while (num + length) in num_set:
+                    length += 1
+                longest = max(length, longest)
+        return longest
+    
 solution = Solution()
 nums = [2,20,4,10,3,4,5]
 print(solution.longest_consecutive(nums))
