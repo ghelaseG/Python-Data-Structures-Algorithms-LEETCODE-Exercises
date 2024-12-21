@@ -44,16 +44,31 @@ class Solution:
 
         #part 3
 
-        num_set = set(nums)
-        longest = 0
+        # num_set = set(nums)
+        # longest = 0
 
-        for num in num_set:
-            if (num - 1) not in num_set:
-                length = 1
-                while (num + length) in num_set:
-                    length += 1
-                longest = max(length, longest)
-        return longest
+        # for num in num_set:
+        #     if (num - 1) not in num_set:
+        #         length = 1
+        #         while (num + length) in num_set:
+        #             length += 1
+        #         longest = max(length, longest)
+        # return longest
+
+
+        #part 4
+        from collections import defaultdict
+        
+        mp = defaultdict(int)
+        result = 0
+
+        for num in nums:
+            if not mp[num]:
+                mp[num] = mp[num - 1] + mp[num + 1] + 1
+                mp[num - mp[num - 1]] = mp[num]
+                mp[num + mp[num + 1]] = mp[num]
+                result = max(result, mp[num])
+        return result
     
 solution = Solution()
 nums = [2,20,4,10,3,4,5]
