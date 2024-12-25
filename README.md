@@ -41,6 +41,7 @@ Coding Challenges/Practice:
 
 - Interactive Coding Challenges : [GitHub](https://github.com/donnemartin/interactive-coding-challenges?tab=readme-ov-file#arrays-and-strings)
 - Coding Practice : [CodingBat](https://codingbat.com/python)
+- Daily challenges : [AdventOfCode](https://adventofcode.com/) 
 
 Patterns and Constraints:
 
