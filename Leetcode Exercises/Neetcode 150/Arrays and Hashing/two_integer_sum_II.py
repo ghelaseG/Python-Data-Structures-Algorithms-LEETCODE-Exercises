@@ -40,12 +40,26 @@ class Solution:
 
         #part 3
         from collections import defaultdict
-        mp = defaultdict(int)
-        for i in range(len(numbers)):
-            tmp = target - numbers[i]
-            if mp[tmp]:
-                return [mp[tmp], i + 1]
-            mp[numbers[i]] = i + 1
+        # mp = defaultdict(int)
+        # for i in range(len(numbers)):
+        #     tmp = target - numbers[i]
+        #     if mp[tmp]:
+        #         return [mp[tmp], i + 1]
+        #     mp[numbers[i]] = i + 1
+        # return []
+
+        #part 4
+        l, r = 0, len(numbers) - 1
+
+        while l < r:
+            current_sum = numbers[l] + numbers[r]
+
+            if current_sum > target:
+                r -= 1
+            elif current_sum < target:
+                l += 1
+            else:
+                return [l + 1, r + 1]
         return []
     
 numbers = [1,2,3,4]
