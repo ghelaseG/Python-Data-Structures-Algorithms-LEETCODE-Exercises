@@ -5,3 +5,17 @@ You may assume that every input has exactly one pair of indices i and j that sat
 
 Return the answer with the smaller index first.
 """
+from typing import List
+
+class Solution:
+    def two_sum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+        return []
+
+nums = [3,4,5,6]
+target = 7
+solution = Solution()
+print(solution.two_sum(nums, target)) 
