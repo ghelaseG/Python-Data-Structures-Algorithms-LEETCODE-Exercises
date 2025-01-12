@@ -9,11 +9,21 @@ from typing import List
 
 class Solution:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
-        return []
+        #part 1
+        # for i in range(len(nums)):
+        #     for j in range(i + 1, len(nums)):
+        #         if nums[i] + nums[j] == target:
+        #             return [i, j]
+        # return []
+
+        #part 2
+        prev_map = {}
+
+        for i, n in enumerate(nums):
+            differ = target - n
+            if differ in prev_map:
+                return [prev_map[differ], i]
+            prev_map[n] = i
 
 nums = [3,4,5,6]
 target = 7
