@@ -36,6 +36,7 @@ class Solution:
             if differ in indices and indices[differ] != i:
                 return [i, indices[differ]] 
             
+            
 nums = [3,4,5,6]
 target = 7
 solution = Solution()
