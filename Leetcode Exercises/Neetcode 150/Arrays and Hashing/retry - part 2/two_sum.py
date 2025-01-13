@@ -16,15 +16,25 @@ class Solution:
         #             return [i, j]
         # return []
 
-        #part 2
-        prev_map = {}
+        # #part 2
+        # prev_map = {}
+
+        # for i, n in enumerate(nums):
+        #     differ = target - n
+        #     if differ in prev_map:
+        #         return [prev_map[differ], i]
+        #     prev_map[n] = i
+
+        #part 3
+        indices = {}
+
+        for i, n in enumerate(nums):
+            indices[n] = i
 
         for i, n in enumerate(nums):
             differ = target - n
-            if differ in prev_map:
-                return [prev_map[differ], i]
-            prev_map[n] = i
-
+            if differ in indices and indices[differ] != i:
+                return [i, indices[differ]] 
 nums = [3,4,5,6]
 target = 7
 solution = Solution()
