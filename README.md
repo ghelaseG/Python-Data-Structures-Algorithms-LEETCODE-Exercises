@@ -1,6 +1,7 @@
 Favourite Resources:
 
 - Visualize and Debug Code : [Python Tutor](https://pythontutor.com)
+- Visualize Blind 75 : [Jaroslaw Weber](https://jaroslaw-weber.github.io/algo-lens/list/all)
 - Beautiful Free Math : [Desmos](https://www.desmos.com/)[GeoGebra](https://www.geogebra.org/graphing?lang=en-GB)
 - Data Structure/Algorithms Visualizations : [myUSF](https://www.cs.usfca.edu/~galles/visualization/)
 [Visualgo](https://visualgo.net/en)
