@@ -9,10 +9,19 @@ from typing import List
 class Solution:
 
     def group_anagram(self, strs: List[str]) -> List[List[str]]:
+        # result = defaultdict(list)
+        # for s in strs:
+        #     sorted_str = ' '.join(sorted(s))
+        #     result[sorted_str].append(s)
+        # return list(result.values())
+
+        #part 2
         result = defaultdict(list)
         for s in strs:
-            sorted_str = ' '.join(sorted(s))
-            result[sorted_str].append(s)
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+            result[tuple(count)].append(s)
         return list(result.values())
     
 strs = ["act","pots","tops","cat","stop","hat"]
