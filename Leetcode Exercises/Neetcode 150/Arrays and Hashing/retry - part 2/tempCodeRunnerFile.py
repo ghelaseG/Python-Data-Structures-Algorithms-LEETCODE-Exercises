@@ -1,29 +1,28 @@
 """
-Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order.
+Given an integer array nums and an integer k, return the k most frequent elements within the array.
 
-An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+The test cases are generated such that the answer is always unique.
+
+You may return the output in any order.
 """
-from collections import defaultdict
 from typing import List
 
 class Solution:
+    def top_k_element(self, nums: List[int], k: int) -> List[int]:
+        count = {}
+        for num in nums:
+            count[num] = 1 + count.get(num, 0)
+        
+        arry = []
+        for num, cnt in count.items():
+            arry.append([cnt, num])
+        arry.sort()
 
-    def group_anagram(self, strs: List[str]) -> List[List[str]]:
-        # result = defaultdict(list)
-        # for s in strs:
-        #     sorted_str = ' '.join(sorted(s))
-        #     result[sorted_str].append(s)
-        # return list(result.values())
+        result = []
+        while len(result) < k:
+            result.append(arry.pop()[1])
+        return result
 
-        #part 2
-        result = defaultdict(list)
-        for s in strs:
-            count = [0] * 26
-            for c in s:
-                count[ord(c) - ord('a')] += 1
-            result[tuple(count)].append(s)
-        return list(result.values())
-    
-strs = ["act","pots","tops","cat","stop","hat"]
-solution = Solution()
-print(solution.group_anagram(strs))
+nums = [1,2,2,3,3,3]
+k = 2
+print(Solution().top_k_element(nums, k))

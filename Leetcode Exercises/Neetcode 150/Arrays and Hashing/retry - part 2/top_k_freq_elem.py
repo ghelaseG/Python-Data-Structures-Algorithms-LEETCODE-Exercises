@@ -5,6 +5,7 @@ The test cases are generated such that the answer is always unique.
 
 You may return the output in any order.
 """
+from typing import List
 
 class Solution:
     def top_k_element(self, nums: List[int], k: int) -> List[int]:
@@ -21,3 +22,7 @@ class Solution:
         while len(result) < k:
             result.append(arry.pop()[1])
         return result
+
+nums = [1,2,2,3,3,3]
+k = 2
+print(Solution().top_k_element(nums, k))    
