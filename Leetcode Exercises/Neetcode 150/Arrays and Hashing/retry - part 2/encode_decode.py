@@ -3,6 +3,7 @@ Design an algorithm to encode a list of strings to a single string. The encoded 
 
 Please implement encode and decode
 """
+from typing import List
 
 class Solution:
     def encode(self, strs: List[str]) -> str:
@@ -39,5 +40,8 @@ class Solution:
             i += sz
         return result
 
-
-        
+strs = ["gg","love","you"]
+gg = Solution().encode(strs)
+print(gg)
+gg2 = Solution().decode(gg)
+print(gg2)    

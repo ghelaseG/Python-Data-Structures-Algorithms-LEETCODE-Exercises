@@ -1,61 +1,47 @@
 """
-Given an integer array nums and an integer k, return the k most frequent elements within the array.
+Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
 
-The test cases are generated such that the answer is always unique.
-
-You may return the output in any order.
+Please implement encode and decode
 """
-import heapq
 from typing import List
 
 class Solution:
-    def top_k_element(self, nums: List[int], k: int) -> List[int]:
-        # count = {}
-        # for num in nums:
-        #     count[num] = 1 + count.get(num, 0)
-        
-        # arry = []
-        # for num, cnt in count.items():
-        #     arry.append([cnt, num])
-        # arry.sort()
-
-        # result = []
-        # while len(result) < k:
-        #     result.append(arry.pop()[1])
-        # return result
-
-        # #Part 2
-        # count = {}
-        # for num in nums:
-        #     count[num] = 1 + count.get(num, 0)
-        
-        # heap = []
-        # for num in count.keys():
-        #     heapq.heappush(heap, (count[num], num))
-        #     if len(heap) > k:
-        #         heapq.heappop(heap)
-        
-        # result = []
-        # for i in range(k):
-        #     result.append(heapq.heappop(heap)[1])
-        # return result
-
-        #part 3
-        count = {}
-        for num in nums:
-            count[num] = count.get(num, 0) + 1
-        
-        freq = [[] for i in range(len(nums) + 1)]
-        for num, cnt in count.items():
-            freq[cnt].append(num)
-
+    def encode(self, strs: List[str]) -> str:
+        if not strs:
+            return ''
+        sizes = []
+        result = ''
+        for s in strs:
+            sizes.append(len(s))
+        for sz in sizes:
+            result += str(sz)
+            result += ","
+        result += "#"
+        for s in strs:
+            result += s
+        return result
+    
+    def decode(self, s: str) -> List[str]:
+        if not s:
+            return []
+        sizes = []
         result = []
-        for i in range(len(freq) - 1, 0, -1):
-            for num in freq[i]:
-                result.append(num)
-                if len(result) == k:
-                    return result 
+        i = 0
+        while s[i] != '#':
+            curr = ''
+            while s[i] != ",":
+                curr += s[i]
+                i += 1
+            sizes.append(int(curr))
+            i += 1
+        i += 1
+        for sz in sizes:
+            result.append(s[i:i + sz])
+            i += sz
+        return result
 
-nums = [1,2,2,3,3,3]
-k = 2
-print(Solution().top_k_element(nums, k))    
+strs = ["gg","love","you"]
+gg = Solution().encode(strs)
+print(gg)
+gg2 = Solution().decode(gg)
+print(gg2)    
