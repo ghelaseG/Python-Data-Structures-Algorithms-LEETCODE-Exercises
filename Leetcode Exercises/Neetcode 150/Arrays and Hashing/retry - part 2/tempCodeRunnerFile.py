@@ -1,71 +1,52 @@
 """
-Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
+Given an integer array nums, return an array output where output[i] is the product of all the elements of nums except nums[i].
 
-Please implement encode and decode
+Each product is guaranteed to fit in a 32-bit integer.
+
+Follow-up: Could you solve it in 
+O
+(
+n
+)
+O(n) time without using the division operation?
 """
 from typing import List
 
 class Solution:
-    def encode(self, strs: List[str]) -> str:
-        ## part 1
-        # if not strs:
-        #     return ''
-        # sizes = []
-        # result = ''
-        # for s in strs:
-        #     sizes.append(len(s))
-        # for sz in sizes:
-        #     result += str(sz)
-        #     result += ","
-        # result += "#"
-        # for s in strs:
-        #     result += s
+    def product_with_exception(self, nums: List[int]) -> List[int]:
+        # part 1 using brute force
+        # n = len(nums)
+        # result = [0] * n
+
+        # for i in range(n):
+        #     product = 1
+        #     for j in range(n):
+        #         if i == j:
+        #             continue
+        #         product *= nums[j]
+            
+        #     result[i] = product
         # return result
 
-        ## part 2
-        result = ""
-        for s in strs:
-            result += str(len(s)) + "#" + s
-        return result
+        # part 2
+        product = 1
+        zero_cnt = 0
 
-    def decode(self, s: str) -> List[str]:
-        ## part 1    
-        # if not s:
-        #     return []
-        # sizes = []
-        # result = []
-        # i = 0
-        # while s[i] != '#':
-        #     curr = ''
-        #     while s[i] != ",":
-        #         curr += s[i]
-        #         i += 1
-        #     sizes.append(int(curr))
-        #     i += 1
-        # i += 1
-        # for sz in sizes:
-        #     result.append(s[i:i + sz])
-        #     i += sz
-        # return result
-        
-        ## part 2
-        result = []
-        i = 0
+        for num in nums:
+            if num:
+                product *= num
+            else:
+                zero_cnt += 1
+        if zero_cnt > 1:
+            return [0] * len(nums)
 
-        while i < len(s):
-            j = i
-            while s[j] != '#':
-                j += 1
-            length = int(s[i:j])
-            i = j + 1
-            j = i + length
-            result.append(s[i:j])
-            i = j
-
+        result = [0] * len(nums)
+        for i, c in enumerate(nums):
+            if zero_cnt:
+                result[i] = 0 if c else product 
+            else:
+                result[i] = product // c
         return result
     
-strs = ["gg","love","you"]
-gg = Solution().encode(strs)
-print(gg)
-gg2 = Solution().decode(gg)
-print(gg2)    
+nums = [1,2,4,6]
+print(Solution().product_with_exception(nums))
