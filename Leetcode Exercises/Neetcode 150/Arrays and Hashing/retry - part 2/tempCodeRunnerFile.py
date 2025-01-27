@@ -49,18 +49,31 @@ class Solution:
         # return result
 
         # part 3
-        n = len(nums)
-        result = [0] * n
-        pref = [0] * n
-        suff = [0] * n
+        # n = len(nums)
+        # result = [0] * n
+        # pref = [0] * n
+        # suff = [0] * n
 
-        pref[0] = suff[n - 1] = 1
-        for i in range(1 , n):
-            pref[i] = nums[i - 1] * pref[i- 1]
-        for i in range(n - 2, -1, -1):
-            suff[i] = nums[i + 1] * suff[i + 1]
-        for i in range(n):
-            result[i] = pref[i] * suff[i]
+        # pref[0] = suff[n - 1] = 1
+        # for i in range(1 , n):
+        #     pref[i] = nums[i - 1] * pref[i- 1]
+        # for i in range(n - 2, -1, -1):
+        #     suff[i] = nums[i + 1] * suff[i + 1]
+        # for i in range(n):
+        #     result[i] = pref[i] * suff[i]
+        # return result
+
+        # part 4
+        result = [1] * (len(nums))
+
+        prefix = 1
+        for i in range(len(nums)):
+            result[i] = prefix
+            prefix *= nums[i]
+        postfix = 1
+        for i in range(len(nums) -1, -1, -1):
+            result[i] *= postfix
+            postfix *= nums[i]
         return result
 
 nums = [1,2,4,6] 
