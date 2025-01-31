@@ -13,11 +13,19 @@ class Solution:
         # return False
 
         # part 2 using sorting
-        nums.sort()
-        for i in range(1 , len(nums)):
-            if nums[i] == nums[i - 1]:
+        # nums.sort()
+        # for i in range(1 , len(nums)):
+        #     if nums[i] == nums[i - 1]:
+        #         return True
+        # return False
+
+        # part 3 using hash set
+        seen = set()
+        for num in nums:
+            if num in seen:
                 return True
+            seen.add(num)
         return False
-    
+
 nums = [1, 2, 3, 3]
 print(Solution().contains_duplicate(nums))
