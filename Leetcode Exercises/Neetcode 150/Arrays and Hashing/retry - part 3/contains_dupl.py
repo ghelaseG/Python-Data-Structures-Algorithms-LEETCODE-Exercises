@@ -20,12 +20,15 @@ class Solution:
         # return False
 
         # part 3 using hash set
-        seen = set()
-        for num in nums:
-            if num in seen:
-                return True
-            seen.add(num)
-        return False
+        # seen = set()
+        # for num in nums:
+        #     if num in seen:
+        #         return True
+        #     seen.add(num)
+        # return False
 
+        # part 4 using hash set length
+        return len(set(nums)) < len(nums)
+    
 nums = [1, 2, 3, 3]
 print(Solution().contains_duplicate(nums))
