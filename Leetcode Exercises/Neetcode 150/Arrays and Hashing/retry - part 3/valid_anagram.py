@@ -12,17 +12,32 @@ class Solution:
         
         # return sorted(s) == sorted(t)
         
-        # part 2
+        # # part 2
+        # if len(s) != len(t):
+        #     return False
+        
+        # countS = {}
+        # countT = {}
+
+        # for i in range(len(s)):
+        #     countS[s[i]] = 1 + countS.get(s[i], 0)
+        #     countT[t[i]] = 1 + countT.get(t[i], 0)
+        # return countS == countT
+
+        # part 3
         if len(s) != len(t):
             return False
         
-        countS = {}
-        countT = {}
-
+        count = [0] * 26
         for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0)
-            countT[t[i]] = 1 + countT.get(t[i], 0)
-        return countS == countT
+            count[ord(s[i]) - ord('a')] += 1
+            count[ord(t[i]) - ord('a')] -= 1
+        
+        for val in count:
+            if val != 0:
+                return False
+        
+        return True
     
 s = "racecar"
 t = "carrace"
