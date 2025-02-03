@@ -36,16 +36,25 @@ class Solution:
         # return []
 
         # part 3 using hash map (two pass)
-        indices = {}
+        # indices = {}
 
-        for i, n in enumerate(nums):
-            indices[n] = i
+        # for i, n in enumerate(nums):
+        #     indices[n] = i
+
+        # for i, n in enumerate(nums):
+        #     diff = target - n
+        #     if diff in indices and indices[diff] != i:
+        #         return [i, indices[diff]] 
+
+        # part 4 using hash map - one pass
+        prevMap = {}
 
         for i, n in enumerate(nums):
             diff = target - n
-            if diff in indices and indices[diff] != i:
-                return [i, indices[diff]] 
-               
+            if diff in prevMap:
+                return [prevMap[diff], i]
+            prevMap[n] = i
+                           
 nums = [4,5,6]
 target = 10
 print(Solution().two_sum(nums, target))
