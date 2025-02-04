@@ -11,10 +11,19 @@ class Solution:
     def group_anagrams(self, strs: List[str]) -> List[List[str]]:
 
         # part 1 using sorting
+        # result = defaultdict(list)
+        # for s in strs:
+        #     sortedS = ''.join(sorted(s))
+        #     result[sortedS].append(s)
+        # return list(result.values())
+
+        # part 2 using hash table
         result = defaultdict(list)
         for s in strs:
-            sortedS = ''.join(sorted(s))
-            result[sortedS].append(s)
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+            result[tuple(count)].append(s)
         return list(result.values())
     
 print(Solution().group_anagrams(strs = ["act","pots","tops","cat","stop","hat"]))
