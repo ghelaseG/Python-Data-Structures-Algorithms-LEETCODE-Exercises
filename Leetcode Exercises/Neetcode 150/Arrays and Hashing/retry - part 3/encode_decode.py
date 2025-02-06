@@ -43,7 +43,7 @@ class Solution:
         return result
 
 
-strs = ["george","code","love","you"]
+strs = ["george","code","loves","you"]
 print("Encode:")
 encode1 = Solution().encode(strs)
 print(encode1)
