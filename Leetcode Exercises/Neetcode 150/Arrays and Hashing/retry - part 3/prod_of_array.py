@@ -9,6 +9,9 @@ from typing import List
 
 class Solution:
     def product_except_self(self, nums: List[int]) -> List[int]:
+        
+        #part 1 using brute force
+
         n = len(nums)
         result = [0] * n
 
