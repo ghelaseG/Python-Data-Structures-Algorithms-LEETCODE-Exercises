@@ -9,3 +9,17 @@ from typing import List
 
 class Solution:
     def longest_consecutive_sequence(self, nums: List[int]) -> int:
+        # part 1 using brute force
+        result = 0
+        store = set(nums)
+
+        for num in nums:
+            streak = 0
+            curr = num
+            while curr in store:
+                streak += 1
+                curr += 1
+            result = max(result, streak)
+        return result
+    
+print(Solution().longest_consecutive_sequence(nums = [2,20,4,10,3,4,5]))
