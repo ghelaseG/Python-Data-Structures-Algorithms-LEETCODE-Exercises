@@ -23,23 +23,35 @@ class Solution:
         # return result
 
         # part 2 using sorting
-        if not nums:
-            return 0
-        result = 0
-        nums.sort()
+        # if not nums:
+        #     return 0
+        # result = 0
+        # nums.sort()
 
-        curr = nums[0]
-        streak = 0
-        i = 0
-        while i < len(nums):
-            if curr != nums[i]:
-                curr = nums[i]
-                streak = 0
-            while i < len(nums) and nums[i] == curr:
-                i += 1
-            streak += 1
-            curr += 1
-            result = max(result, streak)
-        return result
-    
+        # curr = nums[0]
+        # streak = 0
+        # i = 0
+        # while i < len(nums):
+        #     if curr != nums[i]:
+        #         curr = nums[i]
+        #         streak = 0
+        #     while i < len(nums) and nums[i] == curr:
+        #         i += 1
+        #     streak += 1
+        #     curr += 1
+        #     result = max(result, streak)
+        # return result
+
+        # part 3 using hash set
+        num_set =set(nums)
+        longest = 0
+
+        for num in num_set:
+            if (num - 1) not in num_set:
+                length = 1
+                while (num + length) in num_set:
+                    length += 1
+                longest = max(length, longest)
+        return longest
+
 print(Solution().longest_consecutive_sequence(nums = [2,20,4,10,3,4,5]))
