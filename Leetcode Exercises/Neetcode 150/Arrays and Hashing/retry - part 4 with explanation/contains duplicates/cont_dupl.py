@@ -22,11 +22,14 @@ class Solution:
 
         # part 3 using hash set
 
-        seen = set()
-        for num in nums:
-            if num in seen:
-                return True
-            seen.add(num)
-        return False
+        # seen = set()
+        # for num in nums:
+        #     if num in seen:
+        #         return True
+        #     seen.add(num)
+        # return False
+
+        # part 4 using hash set length
+        return len(set(nums)) < len(nums) #as sets does not allow duplicates, this block of code will always return true
     
 print(Solution().contains_duplicates(nums=[1,2,3,4,1]))
