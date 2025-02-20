@@ -34,17 +34,24 @@ class Solution:
         #         j -= 1
         # return []
         
-        # part 3 using hash map - two pass
+        # # part 3 using hash map - two pass
+        # indices = {}
+
+        # for i, num in enumerate(nums):
+        #     indices[num] = i
+        
+        # for i, num in enumerate(nums):
+        #     diff = target - num
+        #     if diff in indices and indices[diff] != i:
+        #         return [i, indices[diff]]
+
+        # part 4 using hash map - one pass
         indices = {}
 
-        for i, num in enumerate(nums):
-            indices[num] = i
-        
-        for i, num in enumerate(nums):
+        for i,num in enumerate(nums):
             diff = target - num
-            if diff in indices and indices[diff] != i:
-                return [i, indices[diff]]
-
-
+            if diff in indices:
+                return [indices[diff], i]
+            indices[num] = i
 
 print(Solution().two_sum(nums=[3,4,5,6], target=7))
