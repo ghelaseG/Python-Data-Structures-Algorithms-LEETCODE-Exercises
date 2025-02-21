@@ -7,7 +7,6 @@ from collections import defaultdict
 
 class Solution():
     def group_anagrams(self, strs: list[str]) -> list[list[str]]:
-        # part 1 using sorting
         result = defaultdict(list)
         for s in strs:
             sorted_s = ''.join(sorted(s))
