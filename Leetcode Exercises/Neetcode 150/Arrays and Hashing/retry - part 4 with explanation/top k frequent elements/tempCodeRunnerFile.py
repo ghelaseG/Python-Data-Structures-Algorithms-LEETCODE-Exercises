@@ -24,4 +24,4 @@ class Solution:
             result.append(arr.pop()[1])
         return result
     
-print(Solution().top_k_frequent_element(nums = [1,2,2,3,3,3], k = 2))
+print(Solution().top_k_frequent_element(nums = [1,1,1,1,2,2,3,3,3], k = 2))
