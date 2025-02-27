@@ -15,13 +15,19 @@ class Solution():
         # return list(result.values())
 
         # part 2 using hash table
-        result = defaultdict(list)
-        for s in strs:
-            count = [0] * 26
-            print(count)
-            for char in s:
-                count[ord(char) - ord('a')] += 1
-            result[tuple(count)].append(s)
-        return list(result.values())
-    
+        # result = defaultdict(list)
+        # for s in strs:
+        #     count = [0] * 26
+        #     for char in s:
+        #         count[ord(char) - ord('a')] += 1
+        #     result[tuple(count)].append(s)
+        # return list(result.values())
+
+        # part 3 using bucket sort
+        count = {}
+        freq = [[] for i in range(len(nums) + 1)]
+
+        for num in nums:
+            
+
 print(Solution().group_anagrams(strs = ["act","pots","tops","cat","stop","hat"]))
