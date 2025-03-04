@@ -6,39 +6,63 @@ Please implement encode and decode
 
 class Solution:
     def encode(self, strs: list[str]) -> str:
-        if not strs:
-            return ""
+        # part 1
+        # if not strs:
+        #     return ""
         
-        sizes = []
-        result = ""
+        # sizes = []
+        # result = ""
 
+        # for s in strs:
+        #     sizes.append(len(s))
+        # for sz in sizes:
+        #     result += str(sz)
+        #     result += ','
+        # result += '#'
+        # for s in strs:
+        #     result += s
+        # return result
+
+        # part 2
+        result = ""
         for s in strs:
-            sizes.append(len(s))
-        for sz in sizes:
-            result += str(sz)
-            result += ','
-        result += '#'
-        for s in strs:
-            result += s
+            result += str(len(s)) + '#' + s
         return result
 
     def decode(self, s: str) -> list[str]:
-        if not s:
-            return []
-        sizes = []
+        # part 1
+        # if not s:
+        #     return []
+        # sizes = []
+        # result = []
+        # i = 0
+        # while s[i] != '#':
+        #     curr = ""
+        #     while s[i] != ',':
+        #         curr += s[i]
+        #         i += 1
+        #     sizes.append(int(curr))
+        #     i += 1
+        # i += 1
+        # for sz in sizes:
+        #     result.append(s[i:i + sz])
+        #     i += sz
+        # return result
+        
+        # part 2 
         result = []
         i = 0
-        while s[i] != '#':
-            curr = ""
-            while s[i] != ',':
-                curr += s[i]
-                i += 1
-            sizes.append(int(curr))
-            i += 1
-        i += 1
-        for sz in sizes:
-            result.append(s[i:i + sz])
-            i += sz
+
+        while i < len(s):
+            j = i
+            while s[j] != '#':
+                j += 1
+            length = int(s[i:j])
+            i = j + 1
+            j = i + length
+            result.append(s[i:j])
+            i = j
+        
         return result
 
 encoded = Solution().encode(["george","code"])
