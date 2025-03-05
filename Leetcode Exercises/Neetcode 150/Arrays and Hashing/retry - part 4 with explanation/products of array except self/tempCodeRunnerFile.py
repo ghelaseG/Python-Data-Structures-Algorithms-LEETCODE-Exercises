@@ -12,7 +12,7 @@ class Solution:
         # part 1 using brute force
         n = len(nums)
         result = [0] * n
-
+        print(result)
         for i in range(n):
             prod = 1
             for j in range(n):
