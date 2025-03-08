@@ -24,26 +24,41 @@ class Solution:
         
         # return result
 
-        # part 2 using division
-        product = 1
-        zero_cnt = 0
+        # # part 2 using division
+        # product = 1
+        # zero_cnt = 0
 
-        for num in nums:
-            if num:
-                product *= num
-            else:
-                zero_cnt += 1
-        if zero_cnt > 1:
-            return [0] * len(nums)
+        # for num in nums:
+        #     if num:
+        #         product *= num
+        #     else:
+        #         zero_cnt += 1
+        # if zero_cnt > 1:
+        #     return [0] * len(nums)
         
-        result = [0] * len(nums)
-        for i, c in enumerate(nums):
-            if zero_cnt:
-                result[i] = 0 if c else product
-            else:
-                result[i] = product // c
-        return result
+        # result = [0] * len(nums)
+        # for i, c in enumerate(nums):
+        #     if zero_cnt:
+        #         result[i] = 0 if c else product
+        #     else:
+        #         result[i] = product // c
+        # return result
+        
+        # part 3 using prefix & sufix
+        n = len(nums)
+        result = [0] * n
+        pref = [0] * n
+        suff = [0] * n
 
+        pref[0] = suff[n - 1] = 1
+        for i in range(1, n):
+            pref[i] = nums[i - 1] * pref[i - 1]
+        for i in range(n - 2, -1, -1):
+            suff[i] = nums[i + 1] * suff[i + 1]
+        for i in range(n):
+            result[i] = pref[i] * suff[i]
+        return result
+    
 print(Solution().products_of_array_except_self(nums = [1,2,4,6]))
 
 
