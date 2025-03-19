@@ -78,10 +78,11 @@ class Solution:
                 val = int(board[r][c]) - 1
                 if (1 << val) & rows[r]:
                     return False
+
                 if (1 << val) & cols[c]:
                     return False
                 if (1 << val) & squares[(r // 3) * 3 + (c // 3)]:
-                    return False
+                   return False
                 
                 rows[r] |= (1 << val)
                 cols[c] |= (1 << val)
@@ -90,7 +91,7 @@ class Solution:
         return True
     
 print(Solution().is_valid_sudoku(board = 
-[["1","2",".",".","3",".",".",".","."],
+[["1","1",".",".","3",".",".",".","."],
  ["4",".",".","5",".",".",".",".","."],
  [".","9","8",".",".",".",".",".","3"],
  ["5",".",".",".","6",".",".",".","4"],
