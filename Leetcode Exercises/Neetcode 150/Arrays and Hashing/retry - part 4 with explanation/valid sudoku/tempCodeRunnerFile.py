@@ -66,32 +66,68 @@ class Solution:
         
         # part 3 using bitmask
 
-        rows = [0] * 9
-        cols = [0] * 9
-        squares = [0] * 9
+        # rows = [0] * 9
+        # cols = [0] * 9
+        # squares = [0] * 9
 
-        for r in range(9):
-            for c in range(9):
-                if board[r][c] == ".":
-                    continue
+        # for r in range(9):
+        #     for c in range(9):
+        #         if board[r][c] == ".":
+        #             continue
 
-                val = int(board[r][c]) - 1
-                if (1 << val) & rows[r]:
-                    return False
+        #         val = int(board[r][c]) - 1
+        #         if (1 << val) & rows[r]:
+        #             return False
 
-                if (1 << val) & cols[c]:
-                    return False
-                if (1 << val) & squares[(r // 3) * 3 + (c // 3)]:
-                   return False
+        #         if (1 << val) & cols[c]:
+        #             return False
+        #         if (1 << val) & squares[(r // 3) * 3 + (c // 3)]:
+        #            return False
                 
-                rows[r] |= (1 << val)
-                cols[c] |= (1 << val)
-                squares[(r // 3) * 3 + (c // 3)] |= (1 << val)
+        #         rows[r] |= (1 << val)
+        #         cols[c] |= (1 << val)
+        #         squares[(r // 3) * 3 + (c // 3)] |= (1 << val)
+        # return True
         
+        # part 4 using hash map and sets
+        
+        #rows
+        for i in range(9):
+            s = set()
+            for j in range(9):
+                item = board[i][j]
+                if item in s:
+                    return False
+                elif item != '.':
+                    s.add(item)
+        
+        #cols
+        for i in range(9):
+            s = set()
+            for j in range(9):
+                item = board[j][i]
+                if item in s:
+                    return False
+                elif item != '.':
+                    s.add(item)
+        #squares
+        
+        starts = [(0,0), (0,3), (0,6),
+                  (3,0), (3,3), (3,6),
+                  (6,0), (6,3), (6,6)]
+        for i,j in starts:
+            s = set()
+            for row in range(i, i + 3):
+                for col in range(j, j + 3):
+                    item = board[row][col]
+                    if item in s:
+                        return False
+                    elif item != '.':
+                        s.add(item)
         return True
-    
+                            
 print(Solution().is_valid_sudoku(board = 
-[["1","1",".",".","3",".",".",".","."],
+[["1","2",".",".","3",".",".",".","."],
  ["4",".",".","5",".",".",".",".","."],
  [".","9","8",".",".",".",".",".","3"],
  ["5",".",".",".","6",".",".",".","4"],
@@ -100,3 +136,4 @@ print(Solution().is_valid_sudoku(board =
  [".",".",".",".",".",".","2",".","."],
  [".",".",".","4","1","9",".",".","8"],
  [".",".",".",".","8",".",".","7","9"]]))
+
