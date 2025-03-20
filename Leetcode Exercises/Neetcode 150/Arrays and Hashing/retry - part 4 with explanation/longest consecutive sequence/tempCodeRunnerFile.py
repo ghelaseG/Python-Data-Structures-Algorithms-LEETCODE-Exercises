@@ -5,6 +5,7 @@ A consecutive sequence is a sequence of elements in which each element is exactl
 
 You must write an algorithm that runs in O(n) time.
 """
+from collections import defaultdict
 
 class Solution:
     def longest_cons_sequence(self, nums: list[int]) -> int:
@@ -44,15 +45,27 @@ class Solution:
         # return result
 
         # part 3 using hash set
-        num_set = set(nums)
-        longest = 0
+        # num_set = set(nums)
+        # longest = 0
 
-        for num in num_set:
-            if (num - 1) not in num_set:
-                length = 1
-                while (num + length) in num_set:
-                    length += 1
-                longest = max(length, longest)
-        return longest
+        # for num in num_set:
+        #     if (num - 1) not in num_set:
+        #         length = 1
+        #         while (num + length) in num_set:
+        #             length += 1
+        #         longest = max(length, longest)
+        # return longest
+
+        # part 4 using hash map
+        mp = defaultdict(int)
+        result = 0
+
+        for num in nums:
+            if not mp[num]:
+                mp[num] = mp[num - 1] + mp[num + 1] + 1
+                mp[num - mp[num - 1]] = mp[num]
+                mp[num + mp[num + 1]] = mp[num]
+                result = max(result, mp[num])
+        return result
 
 print(Solution().longest_cons_sequence(nums = [2,20,4,10,3,4,5]))
