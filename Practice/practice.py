@@ -1,5 +1,5 @@
 # https://www.youtube.com/watch?v=nRkx4pOvMYI&list=PL3dZTJxh461hd5_Ho6pyEHvnCef3Sv3oU&ab_channel=KyleWilsonCode
-
+# https://www.youtube.com/watch?v=0K_eZGS5NsU&t=10s&ab_channel=NeetCode
 """
 recap python
 """
